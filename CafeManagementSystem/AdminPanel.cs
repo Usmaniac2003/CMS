@@ -10,9 +10,6 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Data.SqlClient;
-
-
-
 namespace CafeManagementSystem
     {
     public partial class AdminPanel : MaterialForm
@@ -243,6 +240,10 @@ namespace CafeManagementSystem
 
         private void AdminPanel_Load(object sender, EventArgs e)
             {
+            // TODO: This line of code loads data into the 'cafe1DataSet2.Inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter.Fill(this.cafe1DataSet2.Inventory);
+            // TODO: This line of code loads data into the 'cafe1DataSet1.MenuItems' table. You can move, or remove it, as needed.
+            this.menuItemsTableAdapter.Fill(this.cafe1DataSet1.MenuItems);
             // TODO: This line of code loads data into the 'cafe1DataSet.Employees' table. You can move, or remove it, as needed.
             this.employeesTableAdapter1.Fill(this.cafe1DataSet.Employees);
             // TODO: This line of code loads data into the 'rMS2DataSet.Employees' table. You can move, or remove it, as needed.
@@ -310,5 +311,159 @@ namespace CafeManagementSystem
                 }
             }
         }
+
+        private void materialButton1_Click_1(object sender, EventArgs e)
+        {
+            string name = add_item_name.Text;
+            decimal price = Convert.ToDecimal(add_itemprice.Text);
+            string desc = add_itemdesc.Text;
+            string category = add_itemcategory.Text;
+            string AvailaibleChoice=add_itemavailaible.Text;
+            bool available = true;
+            if (AvailaibleChoice!="Yes") {
+                available = false;
+            }
+            
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            // SQL query to insert a new item into the MenuItems table
+            string query = "INSERT INTO MenuItems ([Name], Description, Price, Category, Available) " +
+                           "VALUES (@Name, @Description, @Price, @Category, @Available)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Name", name);
+                command.Parameters.AddWithValue("@Description", desc);
+                command.Parameters.AddWithValue("@Price", price);
+                command.Parameters.AddWithValue("@Category", category);
+                command.Parameters.AddWithValue("@Available", available);
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Item added successfully!");
+                        // Clear the input fields after successful addition
+                        add_item_name.Text = "";
+                        add_itemprice.Text = "";
+                        add_itemdesc.Text = "";
+                        add_itemcategory.Text = "";
+                        add_itemavailaible.Text = "";
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add item!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void materialLabel17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            string id = remove_itemid.Text;
+
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            // SQL query to delete an item from the MenuItems table based on MenuItemID
+            string query = "DELETE FROM MenuItems WHERE MenuItemID = @MenuItemID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MenuItemID", id);
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Item removed successfully!");
+                        remove_itemid.Text = ""; // Clear the input field after successful removal
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("No item found with the provided ID!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            string id = edit_itemid.Text;
+            string name = edit_itemname.Text;
+            decimal price = Convert.ToDecimal(edit_itemprice.Text);
+            string desc = edit_desc.Text;
+            string availaibility=edit_availaibility.Text;
+            bool status = true; // Assuming user input is in string format
+            if(availaibility!="Yes")
+            {
+                status = false;
+            }
+            
+
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            // SQL query to update an item in the MenuItems table based on MenuItemID
+            string query = "UPDATE MenuItems SET [Name] = @Name, Price = @Price, Description = @Description, Available = @Available WHERE MenuItemID = @MenuItemID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Name", name);
+                command.Parameters.AddWithValue("@Price", price);
+                command.Parameters.AddWithValue("@Description", desc);
+                command.Parameters.AddWithValue("@Available", status);
+                command.Parameters.AddWithValue("@MenuItemID", id);
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Item updated successfully!");
+                        // Clear the input fields after successful update
+                        edit_itemid.Text = "";
+                        edit_itemname.Text = "";
+                        edit_itemprice.Text = "";
+                        edit_desc.Text = "";
+                        edit_availaibility.Text = "";
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("No item found with the provided ID!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
     }
-    }
+}

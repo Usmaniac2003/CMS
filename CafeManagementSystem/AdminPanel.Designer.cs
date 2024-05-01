@@ -67,6 +67,9 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
+            this.emp_id = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
             this.employee_managment = new System.Windows.Forms.ImageList(this.components);
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -75,14 +78,14 @@
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
-            this.materialMultiLineTextBox1 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.add_itemdesc = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialComboBox2 = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
+            this.add_itemavailaible = new MaterialSkin.Controls.MaterialComboBox();
+            this.add_itemcategory = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox5 = new MaterialSkin.Controls.MaterialTextBox();
+            this.add_itemprice = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
+            this.add_item_name = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
@@ -90,45 +93,58 @@
             this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
             this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox11 = new MaterialSkin.Controls.MaterialTextBox();
+            this.remove_itemid = new MaterialSkin.Controls.MaterialTextBox();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
-            this.materialMultiLineTextBox2 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.edit_desc = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox10 = new MaterialSkin.Controls.MaterialTextBox();
+            this.edit_itemid = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialComboBox3 = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialTextBox7 = new MaterialSkin.Controls.MaterialTextBox();
+            this.edit_availaibility = new MaterialSkin.Controls.MaterialComboBox();
+            this.edit_itemcategory = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox8 = new MaterialSkin.Controls.MaterialTextBox();
+            this.edit_itemprice = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox9 = new MaterialSkin.Controls.MaterialTextBox();
+            this.edit_itemname = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
-            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox12 = new MaterialSkin.Controls.MaterialTextBox();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.materialCard8 = new MaterialSkin.Controls.MaterialCard();
             this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTextBox13 = new MaterialSkin.Controls.MaterialTextBox();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.menuItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availableDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.menuItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cafe1DataSet1 = new CafeManagementSystem.cafe1DataSet1();
             this.materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.rMS2DataSet = new CafeManagementSystem.RMS2DataSet();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeesTableAdapter = new CafeManagementSystem.RMS2DataSetTableAdapters.EmployeesTableAdapter();
             this.employeesTableAdapter1 = new CafeManagementSystem.cafe1DataSetTableAdapters.EmployeesTableAdapter();
-            this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
-            this.emp_id = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
+            this.menuItemsTableAdapter = new CafeManagementSystem.cafe1DataSet1TableAdapters.MenuItemsTableAdapter();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.cafe1DataSet2 = new CafeManagementSystem.cafe1DataSet2();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryTableAdapter = new CafeManagementSystem.cafe1DataSet2TableAdapters.InventoryTableAdapter();
+            this.inventoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuItemIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reorderThresholdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             this.materialTabControl3.SuspendLayout();
             this.tabPage9.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.materialTabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -148,13 +164,18 @@
             this.tabPage13.SuspendLayout();
             this.materialCard3.SuspendLayout();
             this.materialCard4.SuspendLayout();
-            this.tabPage14.SuspendLayout();
-            this.materialCard7.SuspendLayout();
             this.tabPage15.SuspendLayout();
             this.materialCard8.SuspendLayout();
+            this.tabPage16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuItemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet1)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rMS2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // admin_icons
@@ -261,6 +282,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.dataGridView3);
             this.tabPage4.ImageKey = "stock.png";
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
@@ -654,6 +676,56 @@
             this.tabPage8.Text = "Remove Employee";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // materialButton7
+            // 
+            this.materialButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton7.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton7.Depth = 0;
+            this.materialButton7.HighEmphasis = true;
+            this.materialButton7.Icon = null;
+            this.materialButton7.Location = new System.Drawing.Point(18, 133);
+            this.materialButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton7.Name = "materialButton7";
+            this.materialButton7.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton7.Size = new System.Drawing.Size(80, 36);
+            this.materialButton7.TabIndex = 2;
+            this.materialButton7.Text = "Remove";
+            this.materialButton7.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton7.UseAccentColor = false;
+            this.materialButton7.UseVisualStyleBackColor = true;
+            this.materialButton7.Click += new System.EventHandler(this.materialButton7_Click);
+            // 
+            // emp_id
+            // 
+            this.emp_id.AnimateReadOnly = false;
+            this.emp_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emp_id.Depth = 0;
+            this.emp_id.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.emp_id.LeadingIcon = null;
+            this.emp_id.Location = new System.Drawing.Point(18, 53);
+            this.emp_id.MaxLength = 50;
+            this.emp_id.MouseState = MaterialSkin.MouseState.OUT;
+            this.emp_id.Multiline = false;
+            this.emp_id.Name = "emp_id";
+            this.emp_id.Size = new System.Drawing.Size(379, 50);
+            this.emp_id.TabIndex = 1;
+            this.emp_id.Text = "";
+            this.emp_id.TrailingIcon = null;
+            // 
+            // materialLabel20
+            // 
+            this.materialLabel20.AutoSize = true;
+            this.materialLabel20.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.materialLabel20.Depth = 0;
+            this.materialLabel20.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel20.Location = new System.Drawing.Point(15, 14);
+            this.materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel20.Name = "materialLabel20";
+            this.materialLabel20.Size = new System.Drawing.Size(89, 19);
+            this.materialLabel20.TabIndex = 0;
+            this.materialLabel20.Text = "Employee ID";
+            // 
             // employee_managment
             // 
             this.employee_managment.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("employee_managment.ImageStream")));
@@ -711,8 +783,8 @@
             this.materialTabControl4.Controls.Add(this.tabPage11);
             this.materialTabControl4.Controls.Add(this.tabPage12);
             this.materialTabControl4.Controls.Add(this.tabPage13);
-            this.materialTabControl4.Controls.Add(this.tabPage14);
             this.materialTabControl4.Controls.Add(this.tabPage15);
+            this.materialTabControl4.Controls.Add(this.tabPage16);
             this.materialTabControl4.Depth = 0;
             this.materialTabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl4.Location = new System.Drawing.Point(4, 63);
@@ -743,12 +815,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Controls.Add(this.materialCard5);
-            this.materialCard1.Controls.Add(this.materialComboBox2);
-            this.materialCard1.Controls.Add(this.materialTextBox4);
+            this.materialCard1.Controls.Add(this.add_itemavailaible);
+            this.materialCard1.Controls.Add(this.add_itemcategory);
             this.materialCard1.Controls.Add(this.materialLabel5);
-            this.materialCard1.Controls.Add(this.materialTextBox5);
+            this.materialCard1.Controls.Add(this.add_itemprice);
             this.materialCard1.Controls.Add(this.materialLabel8);
-            this.materialCard1.Controls.Add(this.materialTextBox6);
+            this.materialCard1.Controls.Add(this.add_item_name);
             this.materialCard1.Controls.Add(this.materialLabel9);
             this.materialCard1.Controls.Add(this.materialLabel10);
             this.materialCard1.Controls.Add(this.materialButton1);
@@ -759,14 +831,14 @@
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(19, 17, 19, 17);
-            this.materialCard1.Size = new System.Drawing.Size(1309, 562);
+            this.materialCard1.Size = new System.Drawing.Size(1309, 552);
             this.materialCard1.TabIndex = 3;
             // 
             // materialCard5
             // 
             this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCard5.Controls.Add(this.materialMultiLineTextBox1);
+            this.materialCard5.Controls.Add(this.add_itemdesc);
             this.materialCard5.Controls.Add(this.materialLabel6);
             this.materialCard5.Depth = 0;
             this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -778,20 +850,20 @@
             this.materialCard5.Size = new System.Drawing.Size(545, 402);
             this.materialCard5.TabIndex = 29;
             // 
-            // materialMultiLineTextBox1
+            // add_itemdesc
             // 
-            this.materialMultiLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialMultiLineTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialMultiLineTextBox1.Depth = 0;
-            this.materialMultiLineTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMultiLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialMultiLineTextBox1.Location = new System.Drawing.Point(36, 41);
-            this.materialMultiLineTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            this.materialMultiLineTextBox1.Size = new System.Drawing.Size(487, 329);
-            this.materialMultiLineTextBox1.TabIndex = 27;
-            this.materialMultiLineTextBox1.Text = "";
+            this.add_itemdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.add_itemdesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.add_itemdesc.Depth = 0;
+            this.add_itemdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.add_itemdesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.add_itemdesc.Location = new System.Drawing.Point(36, 41);
+            this.add_itemdesc.Margin = new System.Windows.Forms.Padding(4);
+            this.add_itemdesc.MouseState = MaterialSkin.MouseState.HOVER;
+            this.add_itemdesc.Name = "add_itemdesc";
+            this.add_itemdesc.Size = new System.Drawing.Size(487, 329);
+            this.add_itemdesc.TabIndex = 27;
+            this.add_itemdesc.Text = "";
             // 
             // materialLabel6
             // 
@@ -806,52 +878,52 @@
             this.materialLabel6.TabIndex = 26;
             this.materialLabel6.Text = "Description";
             // 
-            // materialComboBox2
+            // add_itemavailaible
             // 
-            this.materialComboBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            this.add_itemavailaible.AutoCompleteCustomSource.AddRange(new string[] {
             "No ",
             "Yes"});
-            this.materialComboBox2.AutoResize = false;
-            this.materialComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox2.Depth = 0;
-            this.materialComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox2.DropDownHeight = 174;
-            this.materialComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox2.DropDownWidth = 121;
-            this.materialComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox2.FormattingEnabled = true;
-            this.materialComboBox2.IntegralHeight = false;
-            this.materialComboBox2.ItemHeight = 43;
-            this.materialComboBox2.Items.AddRange(new object[] {
+            this.add_itemavailaible.AutoResize = false;
+            this.add_itemavailaible.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.add_itemavailaible.Depth = 0;
+            this.add_itemavailaible.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.add_itemavailaible.DropDownHeight = 174;
+            this.add_itemavailaible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.add_itemavailaible.DropDownWidth = 121;
+            this.add_itemavailaible.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.add_itemavailaible.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.add_itemavailaible.FormattingEnabled = true;
+            this.add_itemavailaible.IntegralHeight = false;
+            this.add_itemavailaible.ItemHeight = 43;
+            this.add_itemavailaible.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.materialComboBox2.Location = new System.Drawing.Point(19, 402);
-            this.materialComboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.materialComboBox2.MaxDropDownItems = 4;
-            this.materialComboBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox2.Name = "materialComboBox2";
-            this.materialComboBox2.Size = new System.Drawing.Size(544, 49);
-            this.materialComboBox2.StartIndex = 0;
-            this.materialComboBox2.TabIndex = 24;
+            this.add_itemavailaible.Location = new System.Drawing.Point(19, 402);
+            this.add_itemavailaible.Margin = new System.Windows.Forms.Padding(4);
+            this.add_itemavailaible.MaxDropDownItems = 4;
+            this.add_itemavailaible.MouseState = MaterialSkin.MouseState.OUT;
+            this.add_itemavailaible.Name = "add_itemavailaible";
+            this.add_itemavailaible.Size = new System.Drawing.Size(544, 49);
+            this.add_itemavailaible.StartIndex = 0;
+            this.add_itemavailaible.TabIndex = 24;
             // 
-            // materialTextBox4
+            // add_itemcategory
             // 
-            this.materialTextBox4.AnimateReadOnly = false;
-            this.materialTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox4.Depth = 0;
-            this.materialTextBox4.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox4.LeadingIcon = null;
-            this.materialTextBox4.Location = new System.Drawing.Point(19, 274);
-            this.materialTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox4.MaxLength = 50;
-            this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox4.Multiline = false;
-            this.materialTextBox4.Name = "materialTextBox4";
-            this.materialTextBox4.Size = new System.Drawing.Size(545, 50);
-            this.materialTextBox4.TabIndex = 23;
-            this.materialTextBox4.Text = "";
-            this.materialTextBox4.TrailingIcon = null;
+            this.add_itemcategory.AnimateReadOnly = false;
+            this.add_itemcategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.add_itemcategory.Depth = 0;
+            this.add_itemcategory.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.add_itemcategory.LeadingIcon = null;
+            this.add_itemcategory.Location = new System.Drawing.Point(19, 274);
+            this.add_itemcategory.Margin = new System.Windows.Forms.Padding(4);
+            this.add_itemcategory.MaxLength = 50;
+            this.add_itemcategory.MouseState = MaterialSkin.MouseState.OUT;
+            this.add_itemcategory.Multiline = false;
+            this.add_itemcategory.Name = "add_itemcategory";
+            this.add_itemcategory.Size = new System.Drawing.Size(545, 50);
+            this.add_itemcategory.TabIndex = 23;
+            this.add_itemcategory.Text = "";
+            this.add_itemcategory.TrailingIcon = null;
             // 
             // materialLabel5
             // 
@@ -866,23 +938,23 @@
             this.materialLabel5.TabIndex = 22;
             this.materialLabel5.Text = "Catagory";
             // 
-            // materialTextBox5
+            // add_itemprice
             // 
-            this.materialTextBox5.AnimateReadOnly = false;
-            this.materialTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox5.Depth = 0;
-            this.materialTextBox5.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox5.LeadingIcon = null;
-            this.materialTextBox5.Location = new System.Drawing.Point(19, 164);
-            this.materialTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox5.MaxLength = 50;
-            this.materialTextBox5.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox5.Multiline = false;
-            this.materialTextBox5.Name = "materialTextBox5";
-            this.materialTextBox5.Size = new System.Drawing.Size(545, 50);
-            this.materialTextBox5.TabIndex = 21;
-            this.materialTextBox5.Text = "";
-            this.materialTextBox5.TrailingIcon = null;
+            this.add_itemprice.AnimateReadOnly = false;
+            this.add_itemprice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.add_itemprice.Depth = 0;
+            this.add_itemprice.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.add_itemprice.LeadingIcon = null;
+            this.add_itemprice.Location = new System.Drawing.Point(19, 164);
+            this.add_itemprice.Margin = new System.Windows.Forms.Padding(4);
+            this.add_itemprice.MaxLength = 50;
+            this.add_itemprice.MouseState = MaterialSkin.MouseState.OUT;
+            this.add_itemprice.Multiline = false;
+            this.add_itemprice.Name = "add_itemprice";
+            this.add_itemprice.Size = new System.Drawing.Size(545, 50);
+            this.add_itemprice.TabIndex = 21;
+            this.add_itemprice.Text = "";
+            this.add_itemprice.TrailingIcon = null;
             // 
             // materialLabel8
             // 
@@ -898,23 +970,23 @@
             this.materialLabel8.Text = "Available";
             this.materialLabel8.Click += new System.EventHandler(this.materialLabel8_Click);
             // 
-            // materialTextBox6
+            // add_item_name
             // 
-            this.materialTextBox6.AnimateReadOnly = false;
-            this.materialTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox6.Depth = 0;
-            this.materialTextBox6.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox6.LeadingIcon = null;
-            this.materialTextBox6.Location = new System.Drawing.Point(19, 55);
-            this.materialTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox6.MaxLength = 50;
-            this.materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox6.Multiline = false;
-            this.materialTextBox6.Name = "materialTextBox6";
-            this.materialTextBox6.Size = new System.Drawing.Size(545, 50);
-            this.materialTextBox6.TabIndex = 14;
-            this.materialTextBox6.Text = "";
-            this.materialTextBox6.TrailingIcon = null;
+            this.add_item_name.AnimateReadOnly = false;
+            this.add_item_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.add_item_name.Depth = 0;
+            this.add_item_name.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.add_item_name.LeadingIcon = null;
+            this.add_item_name.Location = new System.Drawing.Point(19, 55);
+            this.add_item_name.Margin = new System.Windows.Forms.Padding(4);
+            this.add_item_name.MaxLength = 50;
+            this.add_item_name.MouseState = MaterialSkin.MouseState.OUT;
+            this.add_item_name.Multiline = false;
+            this.add_item_name.Name = "add_item_name";
+            this.add_item_name.Size = new System.Drawing.Size(545, 50);
+            this.add_item_name.TabIndex = 14;
+            this.add_item_name.Text = "";
+            this.add_item_name.TrailingIcon = null;
             // 
             // materialLabel9
             // 
@@ -950,7 +1022,7 @@
             this.materialButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(19, 509);
+            this.materialButton1.Location = new System.Drawing.Point(19, 499);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -961,6 +1033,7 @@
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click_1);
             // 
             // tabPage12
             // 
@@ -979,7 +1052,7 @@
             this.materialCard6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard6.Controls.Add(this.materialButton4);
             this.materialCard6.Controls.Add(this.materialLabel17);
-            this.materialCard6.Controls.Add(this.materialTextBox11);
+            this.materialCard6.Controls.Add(this.remove_itemid);
             this.materialCard6.Depth = 0;
             this.materialCard6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard6.Location = new System.Drawing.Point(485, 84);
@@ -1009,37 +1082,39 @@
             this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton4.UseAccentColor = false;
             this.materialButton4.UseVisualStyleBackColor = true;
+            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
             // 
             // materialLabel17
             // 
             this.materialLabel17.AutoSize = true;
             this.materialLabel17.Depth = 0;
             this.materialLabel17.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel17.Location = new System.Drawing.Point(161, 160);
+            this.materialLabel17.Location = new System.Drawing.Point(38, 166);
             this.materialLabel17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel17.Name = "materialLabel17";
             this.materialLabel17.Size = new System.Drawing.Size(161, 19);
             this.materialLabel17.TabIndex = 1;
             this.materialLabel17.Text = "Enter itemID to remove";
+            this.materialLabel17.Click += new System.EventHandler(this.materialLabel17_Click);
             // 
-            // materialTextBox11
+            // remove_itemid
             // 
-            this.materialTextBox11.AnimateReadOnly = false;
-            this.materialTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox11.Depth = 0;
-            this.materialTextBox11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox11.LeadingIcon = null;
-            this.materialTextBox11.Location = new System.Drawing.Point(41, 213);
-            this.materialTextBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox11.MaxLength = 50;
-            this.materialTextBox11.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox11.Multiline = false;
-            this.materialTextBox11.Name = "materialTextBox11";
-            this.materialTextBox11.Size = new System.Drawing.Size(500, 50);
-            this.materialTextBox11.TabIndex = 0;
-            this.materialTextBox11.Text = "";
-            this.materialTextBox11.TrailingIcon = null;
+            this.remove_itemid.AnimateReadOnly = false;
+            this.remove_itemid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.remove_itemid.Depth = 0;
+            this.remove_itemid.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.remove_itemid.LeadingIcon = null;
+            this.remove_itemid.Location = new System.Drawing.Point(41, 213);
+            this.remove_itemid.Margin = new System.Windows.Forms.Padding(4);
+            this.remove_itemid.MaxLength = 50;
+            this.remove_itemid.MouseState = MaterialSkin.MouseState.OUT;
+            this.remove_itemid.Multiline = false;
+            this.remove_itemid.Name = "remove_itemid";
+            this.remove_itemid.Size = new System.Drawing.Size(500, 50);
+            this.remove_itemid.TabIndex = 0;
+            this.remove_itemid.Text = "";
+            this.remove_itemid.TrailingIcon = null;
             // 
             // tabPage13
             // 
@@ -1059,14 +1134,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard3.Controls.Add(this.materialCard4);
-            this.materialCard3.Controls.Add(this.materialTextBox10);
+            this.materialCard3.Controls.Add(this.edit_itemid);
             this.materialCard3.Controls.Add(this.materialLabel16);
-            this.materialCard3.Controls.Add(this.materialComboBox3);
-            this.materialCard3.Controls.Add(this.materialTextBox7);
+            this.materialCard3.Controls.Add(this.edit_availaibility);
+            this.materialCard3.Controls.Add(this.edit_itemcategory);
             this.materialCard3.Controls.Add(this.materialLabel11);
-            this.materialCard3.Controls.Add(this.materialTextBox8);
+            this.materialCard3.Controls.Add(this.edit_itemprice);
             this.materialCard3.Controls.Add(this.materialLabel13);
-            this.materialCard3.Controls.Add(this.materialTextBox9);
+            this.materialCard3.Controls.Add(this.edit_itemname);
             this.materialCard3.Controls.Add(this.materialLabel14);
             this.materialCard3.Controls.Add(this.materialLabel15);
             this.materialCard3.Controls.Add(this.materialButton3);
@@ -1084,7 +1159,7 @@
             // 
             this.materialCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCard4.Controls.Add(this.materialMultiLineTextBox2);
+            this.materialCard4.Controls.Add(this.edit_desc);
             this.materialCard4.Controls.Add(this.materialLabel12);
             this.materialCard4.Depth = 0;
             this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -1096,20 +1171,20 @@
             this.materialCard4.Size = new System.Drawing.Size(545, 288);
             this.materialCard4.TabIndex = 28;
             // 
-            // materialMultiLineTextBox2
+            // edit_desc
             // 
-            this.materialMultiLineTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialMultiLineTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialMultiLineTextBox2.Depth = 0;
-            this.materialMultiLineTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMultiLineTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialMultiLineTextBox2.Location = new System.Drawing.Point(36, 41);
-            this.materialMultiLineTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.materialMultiLineTextBox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialMultiLineTextBox2.Name = "materialMultiLineTextBox2";
-            this.materialMultiLineTextBox2.Size = new System.Drawing.Size(487, 226);
-            this.materialMultiLineTextBox2.TabIndex = 27;
-            this.materialMultiLineTextBox2.Text = "";
+            this.edit_desc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.edit_desc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.edit_desc.Depth = 0;
+            this.edit_desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.edit_desc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.edit_desc.Location = new System.Drawing.Point(36, 41);
+            this.edit_desc.Margin = new System.Windows.Forms.Padding(4);
+            this.edit_desc.MouseState = MaterialSkin.MouseState.HOVER;
+            this.edit_desc.Name = "edit_desc";
+            this.edit_desc.Size = new System.Drawing.Size(487, 226);
+            this.edit_desc.TabIndex = 27;
+            this.edit_desc.Text = "";
             // 
             // materialLabel12
             // 
@@ -1124,23 +1199,23 @@
             this.materialLabel12.TabIndex = 26;
             this.materialLabel12.Text = "Description";
             // 
-            // materialTextBox10
+            // edit_itemid
             // 
-            this.materialTextBox10.AnimateReadOnly = false;
-            this.materialTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox10.Depth = 0;
-            this.materialTextBox10.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox10.LeadingIcon = null;
-            this.materialTextBox10.Location = new System.Drawing.Point(27, 48);
-            this.materialTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox10.MaxLength = 50;
-            this.materialTextBox10.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox10.Multiline = false;
-            this.materialTextBox10.Name = "materialTextBox10";
-            this.materialTextBox10.Size = new System.Drawing.Size(545, 50);
-            this.materialTextBox10.TabIndex = 27;
-            this.materialTextBox10.Text = "";
-            this.materialTextBox10.TrailingIcon = null;
+            this.edit_itemid.AnimateReadOnly = false;
+            this.edit_itemid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.edit_itemid.Depth = 0;
+            this.edit_itemid.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.edit_itemid.LeadingIcon = null;
+            this.edit_itemid.Location = new System.Drawing.Point(27, 48);
+            this.edit_itemid.Margin = new System.Windows.Forms.Padding(4);
+            this.edit_itemid.MaxLength = 50;
+            this.edit_itemid.MouseState = MaterialSkin.MouseState.OUT;
+            this.edit_itemid.Multiline = false;
+            this.edit_itemid.Name = "edit_itemid";
+            this.edit_itemid.Size = new System.Drawing.Size(545, 50);
+            this.edit_itemid.TabIndex = 27;
+            this.edit_itemid.Text = "";
+            this.edit_itemid.TrailingIcon = null;
             // 
             // materialLabel16
             // 
@@ -1155,52 +1230,52 @@
             this.materialLabel16.TabIndex = 26;
             this.materialLabel16.Text = "Item Name";
             // 
-            // materialComboBox3
+            // edit_availaibility
             // 
-            this.materialComboBox3.AutoCompleteCustomSource.AddRange(new string[] {
+            this.edit_availaibility.AutoCompleteCustomSource.AddRange(new string[] {
             "No ",
             "Yes"});
-            this.materialComboBox3.AutoResize = false;
-            this.materialComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox3.Depth = 0;
-            this.materialComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox3.DropDownHeight = 174;
-            this.materialComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox3.DropDownWidth = 121;
-            this.materialComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox3.FormattingEnabled = true;
-            this.materialComboBox3.IntegralHeight = false;
-            this.materialComboBox3.ItemHeight = 43;
-            this.materialComboBox3.Items.AddRange(new object[] {
+            this.edit_availaibility.AutoResize = false;
+            this.edit_availaibility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.edit_availaibility.Depth = 0;
+            this.edit_availaibility.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.edit_availaibility.DropDownHeight = 174;
+            this.edit_availaibility.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.edit_availaibility.DropDownWidth = 121;
+            this.edit_availaibility.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.edit_availaibility.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.edit_availaibility.FormattingEnabled = true;
+            this.edit_availaibility.IntegralHeight = false;
+            this.edit_availaibility.ItemHeight = 43;
+            this.edit_availaibility.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.materialComboBox3.Location = new System.Drawing.Point(665, 386);
-            this.materialComboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.materialComboBox3.MaxDropDownItems = 4;
-            this.materialComboBox3.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox3.Name = "materialComboBox3";
-            this.materialComboBox3.Size = new System.Drawing.Size(544, 49);
-            this.materialComboBox3.StartIndex = 0;
-            this.materialComboBox3.TabIndex = 24;
+            this.edit_availaibility.Location = new System.Drawing.Point(665, 386);
+            this.edit_availaibility.Margin = new System.Windows.Forms.Padding(4);
+            this.edit_availaibility.MaxDropDownItems = 4;
+            this.edit_availaibility.MouseState = MaterialSkin.MouseState.OUT;
+            this.edit_availaibility.Name = "edit_availaibility";
+            this.edit_availaibility.Size = new System.Drawing.Size(544, 49);
+            this.edit_availaibility.StartIndex = 0;
+            this.edit_availaibility.TabIndex = 24;
             // 
-            // materialTextBox7
+            // edit_itemcategory
             // 
-            this.materialTextBox7.AnimateReadOnly = false;
-            this.materialTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox7.Depth = 0;
-            this.materialTextBox7.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox7.LeadingIcon = null;
-            this.materialTextBox7.Location = new System.Drawing.Point(27, 388);
-            this.materialTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox7.MaxLength = 50;
-            this.materialTextBox7.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox7.Multiline = false;
-            this.materialTextBox7.Name = "materialTextBox7";
-            this.materialTextBox7.Size = new System.Drawing.Size(545, 50);
-            this.materialTextBox7.TabIndex = 23;
-            this.materialTextBox7.Text = "";
-            this.materialTextBox7.TrailingIcon = null;
+            this.edit_itemcategory.AnimateReadOnly = false;
+            this.edit_itemcategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.edit_itemcategory.Depth = 0;
+            this.edit_itemcategory.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.edit_itemcategory.LeadingIcon = null;
+            this.edit_itemcategory.Location = new System.Drawing.Point(27, 388);
+            this.edit_itemcategory.Margin = new System.Windows.Forms.Padding(4);
+            this.edit_itemcategory.MaxLength = 50;
+            this.edit_itemcategory.MouseState = MaterialSkin.MouseState.OUT;
+            this.edit_itemcategory.Multiline = false;
+            this.edit_itemcategory.Name = "edit_itemcategory";
+            this.edit_itemcategory.Size = new System.Drawing.Size(545, 50);
+            this.edit_itemcategory.TabIndex = 23;
+            this.edit_itemcategory.Text = "";
+            this.edit_itemcategory.TrailingIcon = null;
             // 
             // materialLabel11
             // 
@@ -1215,23 +1290,23 @@
             this.materialLabel11.TabIndex = 22;
             this.materialLabel11.Text = "Catagory";
             // 
-            // materialTextBox8
+            // edit_itemprice
             // 
-            this.materialTextBox8.AnimateReadOnly = false;
-            this.materialTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox8.Depth = 0;
-            this.materialTextBox8.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox8.LeadingIcon = null;
-            this.materialTextBox8.Location = new System.Drawing.Point(27, 274);
-            this.materialTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox8.MaxLength = 50;
-            this.materialTextBox8.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox8.Multiline = false;
-            this.materialTextBox8.Name = "materialTextBox8";
-            this.materialTextBox8.Size = new System.Drawing.Size(545, 50);
-            this.materialTextBox8.TabIndex = 21;
-            this.materialTextBox8.Text = "";
-            this.materialTextBox8.TrailingIcon = null;
+            this.edit_itemprice.AnimateReadOnly = false;
+            this.edit_itemprice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.edit_itemprice.Depth = 0;
+            this.edit_itemprice.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.edit_itemprice.LeadingIcon = null;
+            this.edit_itemprice.Location = new System.Drawing.Point(27, 274);
+            this.edit_itemprice.Margin = new System.Windows.Forms.Padding(4);
+            this.edit_itemprice.MaxLength = 50;
+            this.edit_itemprice.MouseState = MaterialSkin.MouseState.OUT;
+            this.edit_itemprice.Multiline = false;
+            this.edit_itemprice.Name = "edit_itemprice";
+            this.edit_itemprice.Size = new System.Drawing.Size(545, 50);
+            this.edit_itemprice.TabIndex = 21;
+            this.edit_itemprice.Text = "";
+            this.edit_itemprice.TrailingIcon = null;
             // 
             // materialLabel13
             // 
@@ -1246,23 +1321,23 @@
             this.materialLabel13.TabIndex = 16;
             this.materialLabel13.Text = "Available";
             // 
-            // materialTextBox9
+            // edit_itemname
             // 
-            this.materialTextBox9.AnimateReadOnly = false;
-            this.materialTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox9.Depth = 0;
-            this.materialTextBox9.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox9.LeadingIcon = null;
-            this.materialTextBox9.Location = new System.Drawing.Point(27, 155);
-            this.materialTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox9.MaxLength = 50;
-            this.materialTextBox9.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox9.Multiline = false;
-            this.materialTextBox9.Name = "materialTextBox9";
-            this.materialTextBox9.Size = new System.Drawing.Size(545, 50);
-            this.materialTextBox9.TabIndex = 14;
-            this.materialTextBox9.Text = "";
-            this.materialTextBox9.TrailingIcon = null;
+            this.edit_itemname.AnimateReadOnly = false;
+            this.edit_itemname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.edit_itemname.Depth = 0;
+            this.edit_itemname.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.edit_itemname.LeadingIcon = null;
+            this.edit_itemname.Location = new System.Drawing.Point(27, 155);
+            this.edit_itemname.Margin = new System.Windows.Forms.Padding(4);
+            this.edit_itemname.MaxLength = 50;
+            this.edit_itemname.MouseState = MaterialSkin.MouseState.OUT;
+            this.edit_itemname.Multiline = false;
+            this.edit_itemname.Name = "edit_itemname";
+            this.edit_itemname.Size = new System.Drawing.Size(545, 50);
+            this.edit_itemname.TabIndex = 14;
+            this.edit_itemname.Text = "";
+            this.edit_itemname.TrailingIcon = null;
             // 
             // materialLabel14
             // 
@@ -1309,84 +1384,7 @@
             this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton3.UseAccentColor = false;
             this.materialButton3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.Controls.Add(this.materialCard7);
-            this.tabPage14.Location = new System.Drawing.Point(4, 27);
-            this.tabPage14.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(1701, 650);
-            this.tabPage14.TabIndex = 3;
-            this.tabPage14.Text = "Check Avalibility";
-            this.tabPage14.UseVisualStyleBackColor = true;
-            // 
-            // materialCard7
-            // 
-            this.materialCard7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard7.Controls.Add(this.materialButton5);
-            this.materialCard7.Controls.Add(this.materialLabel18);
-            this.materialCard7.Controls.Add(this.materialTextBox12);
-            this.materialCard7.Depth = 0;
-            this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard7.Location = new System.Drawing.Point(556, 84);
-            this.materialCard7.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
-            this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard7.Name = "materialCard7";
-            this.materialCard7.Padding = new System.Windows.Forms.Padding(19, 17, 19, 17);
-            this.materialCard7.Size = new System.Drawing.Size(584, 473);
-            this.materialCard7.TabIndex = 1;
-            // 
-            // materialButton5
-            // 
-            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton5.Depth = 0;
-            this.materialButton5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.materialButton5.HighEmphasis = true;
-            this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(19, 420);
-            this.materialButton5.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton5.Name = "materialButton5";
-            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton5.Size = new System.Drawing.Size(546, 36);
-            this.materialButton5.TabIndex = 2;
-            this.materialButton5.Text = "Check Avalibility";
-            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton5.UseAccentColor = false;
-            this.materialButton5.UseVisualStyleBackColor = true;
-            // 
-            // materialLabel18
-            // 
-            this.materialLabel18.AutoSize = true;
-            this.materialLabel18.Depth = 0;
-            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel18.Location = new System.Drawing.Point(117, 161);
-            this.materialLabel18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(225, 19);
-            this.materialLabel18.TabIndex = 1;
-            this.materialLabel18.Text = "Enter ItemID to Check Avalibility";
-            // 
-            // materialTextBox12
-            // 
-            this.materialTextBox12.AnimateReadOnly = false;
-            this.materialTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox12.Depth = 0;
-            this.materialTextBox12.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox12.LeadingIcon = null;
-            this.materialTextBox12.Location = new System.Drawing.Point(41, 213);
-            this.materialTextBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.materialTextBox12.MaxLength = 50;
-            this.materialTextBox12.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox12.Multiline = false;
-            this.materialTextBox12.Name = "materialTextBox12";
-            this.materialTextBox12.Size = new System.Drawing.Size(500, 50);
-            this.materialTextBox12.TabIndex = 0;
-            this.materialTextBox12.Text = "";
-            this.materialTextBox12.TrailingIcon = null;
+            this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
             // 
             // tabPage15
             // 
@@ -1396,7 +1394,7 @@
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Size = new System.Drawing.Size(1701, 650);
             this.tabPage15.TabIndex = 4;
-            this.tabPage15.Text = "Item Catagories";
+            this.tabPage15.Text = "Search by Category";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
             // materialCard8
@@ -1467,6 +1465,104 @@
             this.materialTextBox13.Text = "";
             this.materialTextBox13.TrailingIcon = null;
             // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.dataGridView2);
+            this.tabPage16.Location = new System.Drawing.Point(4, 27);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage16.Size = new System.Drawing.Size(1701, 650);
+            this.tabPage16.TabIndex = 5;
+            this.tabPage16.Text = "View Items";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.menuItemIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn,
+            this.availableDataGridViewCheckBoxColumn});
+            this.dataGridView2.DataSource = this.menuItemsBindingSource;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1695, 644);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // menuItemIDDataGridViewTextBoxColumn
+            // 
+            this.menuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID";
+            this.menuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID";
+            this.menuItemIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.menuItemIDDataGridViewTextBoxColumn.Name = "menuItemIDDataGridViewTextBoxColumn";
+            this.menuItemIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.menuItemIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // availableDataGridViewCheckBoxColumn
+            // 
+            this.availableDataGridViewCheckBoxColumn.DataPropertyName = "Available";
+            this.availableDataGridViewCheckBoxColumn.HeaderText = "Available";
+            this.availableDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.availableDataGridViewCheckBoxColumn.Name = "availableDataGridViewCheckBoxColumn";
+            this.availableDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.availableDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // menuItemsBindingSource
+            // 
+            this.menuItemsBindingSource.DataMember = "MenuItems";
+            this.menuItemsBindingSource.DataSource = this.cafe1DataSet1;
+            // 
+            // cafe1DataSet1
+            // 
+            this.cafe1DataSet1.DataSetName = "cafe1DataSet1";
+            this.cafe1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // materialTabSelector3
             // 
             this.materialTabSelector3.BaseTabControl = this.materialTabControl4;
@@ -1523,55 +1619,83 @@
             // 
             this.employeesTableAdapter1.ClearBeforeFill = true;
             // 
-            // materialLabel20
+            // menuItemsTableAdapter
             // 
-            this.materialLabel20.AutoSize = true;
-            this.materialLabel20.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.materialLabel20.Depth = 0;
-            this.materialLabel20.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel20.Location = new System.Drawing.Point(15, 14);
-            this.materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel20.Name = "materialLabel20";
-            this.materialLabel20.Size = new System.Drawing.Size(89, 19);
-            this.materialLabel20.TabIndex = 0;
-            this.materialLabel20.Text = "Employee ID";
+            this.menuItemsTableAdapter.ClearBeforeFill = true;
             // 
-            // emp_id
+            // dataGridView3
             // 
-            this.emp_id.AnimateReadOnly = false;
-            this.emp_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emp_id.Depth = 0;
-            this.emp_id.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.emp_id.LeadingIcon = null;
-            this.emp_id.Location = new System.Drawing.Point(18, 53);
-            this.emp_id.MaxLength = 50;
-            this.emp_id.MouseState = MaterialSkin.MouseState.OUT;
-            this.emp_id.Multiline = false;
-            this.emp_id.Name = "emp_id";
-            this.emp_id.Size = new System.Drawing.Size(379, 50);
-            this.emp_id.TabIndex = 1;
-            this.emp_id.Text = "";
-            this.emp_id.TrailingIcon = null;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.inventoryIDDataGridViewTextBoxColumn,
+            this.menuItemIDDataGridViewTextBoxColumn1,
+            this.stockLevelDataGridViewTextBoxColumn,
+            this.reorderThresholdDataGridViewTextBoxColumn,
+            this.lastUpdatedDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.inventoryBindingSource;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1717, 748);
+            this.dataGridView3.TabIndex = 1;
             // 
-            // materialButton7
+            // cafe1DataSet2
             // 
-            this.materialButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton7.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton7.Depth = 0;
-            this.materialButton7.HighEmphasis = true;
-            this.materialButton7.Icon = null;
-            this.materialButton7.Location = new System.Drawing.Point(18, 133);
-            this.materialButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton7.Name = "materialButton7";
-            this.materialButton7.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton7.Size = new System.Drawing.Size(158, 36);
-            this.materialButton7.TabIndex = 2;
-            this.materialButton7.Text = "Remove";
-            this.materialButton7.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton7.UseAccentColor = false;
-            this.materialButton7.UseVisualStyleBackColor = true;
-            this.materialButton7.Click += new System.EventHandler(this.materialButton7_Click);
+            this.cafe1DataSet2.DataSetName = "cafe1DataSet2";
+            this.cafe1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "Inventory";
+            this.inventoryBindingSource.DataSource = this.cafe1DataSet2;
+            // 
+            // inventoryTableAdapter
+            // 
+            this.inventoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // inventoryIDDataGridViewTextBoxColumn
+            // 
+            this.inventoryIDDataGridViewTextBoxColumn.DataPropertyName = "InventoryID";
+            this.inventoryIDDataGridViewTextBoxColumn.HeaderText = "InventoryID";
+            this.inventoryIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.inventoryIDDataGridViewTextBoxColumn.Name = "inventoryIDDataGridViewTextBoxColumn";
+            this.inventoryIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inventoryIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // menuItemIDDataGridViewTextBoxColumn1
+            // 
+            this.menuItemIDDataGridViewTextBoxColumn1.DataPropertyName = "MenuItemID";
+            this.menuItemIDDataGridViewTextBoxColumn1.HeaderText = "MenuItemID";
+            this.menuItemIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.menuItemIDDataGridViewTextBoxColumn1.Name = "menuItemIDDataGridViewTextBoxColumn1";
+            this.menuItemIDDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // stockLevelDataGridViewTextBoxColumn
+            // 
+            this.stockLevelDataGridViewTextBoxColumn.DataPropertyName = "StockLevel";
+            this.stockLevelDataGridViewTextBoxColumn.HeaderText = "StockLevel";
+            this.stockLevelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stockLevelDataGridViewTextBoxColumn.Name = "stockLevelDataGridViewTextBoxColumn";
+            this.stockLevelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // reorderThresholdDataGridViewTextBoxColumn
+            // 
+            this.reorderThresholdDataGridViewTextBoxColumn.DataPropertyName = "ReorderThreshold";
+            this.reorderThresholdDataGridViewTextBoxColumn.HeaderText = "ReorderThreshold";
+            this.reorderThresholdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.reorderThresholdDataGridViewTextBoxColumn.Name = "reorderThresholdDataGridViewTextBoxColumn";
+            this.reorderThresholdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastUpdatedDataGridViewTextBoxColumn
+            // 
+            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "LastUpdated";
+            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "LastUpdated";
+            this.lastUpdatedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
+            this.lastUpdatedDataGridViewTextBoxColumn.Width = 125;
             // 
             // AdminPanel
             // 
@@ -1593,6 +1717,7 @@
             this.tabPage1.ResumeLayout(false);
             this.materialTabControl3.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.materialTabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
@@ -1619,15 +1744,19 @@
             this.materialCard3.PerformLayout();
             this.materialCard4.ResumeLayout(false);
             this.materialCard4.PerformLayout();
-            this.tabPage14.ResumeLayout(false);
-            this.materialCard7.ResumeLayout(false);
-            this.materialCard7.PerformLayout();
             this.tabPage15.ResumeLayout(false);
             this.materialCard8.ResumeLayout(false);
             this.materialCard8.PerformLayout();
+            this.tabPage16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuItemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet1)).EndInit();
             this.materialTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rMS2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
             }
@@ -1673,44 +1802,39 @@
         private System.Windows.Forms.TabPage tabPage12;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector3;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox4;
+        private MaterialSkin.Controls.MaterialTextBox add_itemcategory;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox5;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox6;
+        private MaterialSkin.Controls.MaterialTextBox add_itemprice;
+        private MaterialSkin.Controls.MaterialTextBox add_item_name;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox2;
+        private MaterialSkin.Controls.MaterialComboBox add_itemavailaible;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.TabPage tabPage14;
         private System.Windows.Forms.TabPage tabPage15;
         private MaterialSkin.Controls.MaterialCard materialCard3;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox3;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox7;
+        private MaterialSkin.Controls.MaterialComboBox edit_availaibility;
+        private MaterialSkin.Controls.MaterialTextBox edit_itemcategory;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox8;
+        private MaterialSkin.Controls.MaterialTextBox edit_itemprice;
         private MaterialSkin.Controls.MaterialLabel materialLabel13;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox9;
+        private MaterialSkin.Controls.MaterialTextBox edit_itemname;
         private MaterialSkin.Controls.MaterialLabel materialLabel14;
         private MaterialSkin.Controls.MaterialLabel materialLabel15;
         private MaterialSkin.Controls.MaterialButton materialButton3;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox10;
+        private MaterialSkin.Controls.MaterialTextBox edit_itemid;
         private MaterialSkin.Controls.MaterialLabel materialLabel16;
         private MaterialSkin.Controls.MaterialCard materialCard4;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox2;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox edit_desc;
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private MaterialSkin.Controls.MaterialCard materialCard5;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox add_itemdesc;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialCard materialCard6;
         private MaterialSkin.Controls.MaterialButton materialButton4;
         private MaterialSkin.Controls.MaterialLabel materialLabel17;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox11;
-        private MaterialSkin.Controls.MaterialCard materialCard7;
-        private MaterialSkin.Controls.MaterialButton materialButton5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel18;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox12;
+        private MaterialSkin.Controls.MaterialTextBox remove_itemid;
         private MaterialSkin.Controls.MaterialCard materialCard8;
         private MaterialSkin.Controls.MaterialButton materialButton6;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox13;
@@ -1729,5 +1853,25 @@
         private MaterialSkin.Controls.MaterialButton materialButton7;
         private MaterialSkin.Controls.MaterialTextBox emp_id;
         private MaterialSkin.Controls.MaterialLabel materialLabel20;
+        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private cafe1DataSet1 cafe1DataSet1;
+        private System.Windows.Forms.BindingSource menuItemsBindingSource;
+        private cafe1DataSet1TableAdapters.MenuItemsTableAdapter menuItemsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn menuItemIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn availableDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private cafe1DataSet2 cafe1DataSet2;
+        private System.Windows.Forms.BindingSource inventoryBindingSource;
+        private cafe1DataSet2TableAdapters.InventoryTableAdapter inventoryTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventoryIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn menuItemIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockLevelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reorderThresholdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
     }
     }
