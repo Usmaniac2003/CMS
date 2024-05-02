@@ -92,6 +92,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cafe1DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cafe1DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafe1DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafe1DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +179,39 @@
     </None>
     <None Include="cafe1DataSet2.xss">
       <DependentUpon>cafe1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet3.xsc">
+      <DependentUpon>cafe1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet3.xss">
+      <DependentUpon>cafe1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet4.xsc">
+      <DependentUpon>cafe1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet4.xss">
+      <DependentUpon>cafe1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet5.xsc">
+      <DependentUpon>cafe1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet5.xss">
+      <DependentUpon>cafe1DataSet5.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -11,176 +11,176 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Data.SqlClient;
 namespace CafeManagementSystem
-    {
+{
     public partial class AdminPanel : MaterialForm
-        {
+    {
         public AdminPanel()
-            {
+        {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
-            }
+        }
 
         private void materialListView1_SelectedIndexChanged(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard1_Paint(object sender, PaintEventArgs e)
-            {
+        {
             //live bar chart code here
 
-            }
+        }
 
         private void chart1_Click(object sender, EventArgs e)
-            {
-                
+        {
 
 
-            }
+
+        }
 
         private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-            {
+        {
 
 
-            }
+        }
 
         private void Items_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard4_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard7_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard6_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard9_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard8_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void tabPage4_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void tabPage2_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard11_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard10_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard5_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void tabPage3_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void tabPage5_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void tabPage1_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialLabel1_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard3_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialButton2_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialButton1_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void tabPage7_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void elementHost1_ChildChanged_1(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialLabel4_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialLabel1_Click_1(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialTextBox1_TextChanged(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialCard2_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void tabPage7_Click_1(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialLabel2_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialButton2_Click_1(object sender, EventArgs e)
         {
@@ -234,12 +234,12 @@ namespace CafeManagementSystem
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void AdminPanel_Load(object sender, EventArgs e)
-            {
+        {
             // TODO: This line of code loads data into the 'cafe1DataSet2.Inventory' table. You can move, or remove it, as needed.
             this.inventoryTableAdapter.Fill(this.cafe1DataSet2.Inventory);
             // TODO: This line of code loads data into the 'cafe1DataSet1.MenuItems' table. You can move, or remove it, as needed.
@@ -251,24 +251,24 @@ namespace CafeManagementSystem
         }
 
         private void materialTabSelector3_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialLabel8_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialLabel15_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialLabel19_Click(object sender, EventArgs e)
-            {
+        {
 
-            }
+        }
 
         private void materialTextBox1_TextChanged_1(object sender, EventArgs e)
         {
@@ -318,12 +318,13 @@ namespace CafeManagementSystem
             decimal price = Convert.ToDecimal(add_itemprice.Text);
             string desc = add_itemdesc.Text;
             string category = add_itemcategory.Text;
-            string AvailaibleChoice=add_itemavailaible.Text;
+            string AvailaibleChoice = add_itemavailaible.Text;
             bool available = true;
-            if (AvailaibleChoice!="Yes") {
+            if (AvailaibleChoice != "Yes")
+            {
                 available = false;
             }
-            
+
             string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
 
             // SQL query to insert a new item into the MenuItems table
@@ -353,7 +354,7 @@ namespace CafeManagementSystem
                         add_itemdesc.Text = "";
                         add_itemcategory.Text = "";
                         add_itemavailaible.Text = "";
-                        
+
                     }
                     else
                     {
@@ -395,7 +396,7 @@ namespace CafeManagementSystem
                     {
                         MessageBox.Show("Item removed successfully!");
                         remove_itemid.Text = ""; // Clear the input field after successful removal
-                        
+
                     }
                     else
                     {
@@ -415,13 +416,13 @@ namespace CafeManagementSystem
             string name = edit_itemname.Text;
             decimal price = Convert.ToDecimal(edit_itemprice.Text);
             string desc = edit_desc.Text;
-            string availaibility=edit_availaibility.Text;
+            string availaibility = edit_availaibility.Text;
             bool status = true; // Assuming user input is in string format
-            if(availaibility!="Yes")
+            if (availaibility != "Yes")
             {
                 status = false;
             }
-            
+
 
             string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
 
@@ -451,7 +452,7 @@ namespace CafeManagementSystem
                         edit_itemprice.Text = "";
                         edit_desc.Text = "";
                         edit_availaibility.Text = "";
-                        
+
                     }
                     else
                     {
@@ -465,5 +466,215 @@ namespace CafeManagementSystem
             }
         }
 
+        private void materialButton5_Click(object sender, EventArgs e)
+        {
+
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT *\r\nFROM MenuItems\r\nWHERE Price > (\r\n    SELECT AVG(Price)\r\n    FROM MenuItems\r\n);\r\n"; // Replace YourTable with your actual table name
+            //Retrieve the names of menu items that have a price higher than the average price of all menu items. SubQuery-1
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView4.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton8_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT *\r\nFROM Employees\r\nWHERE EmployeeID IN (\r\n    SELECT EmployeeID\r\n    FROM (\r\n        SELECT EmployeeID, COUNT(*) AS NumShifts\r\n        FROM Shifts\r\n        GROUP BY EmployeeID\r\n    ) AS EmployeeShiftCounts\r\n    WHERE NumShifts > (\r\n        SELECT AVG(NumShifts)\r\n        FROM (\r\n            SELECT COUNT(*) AS NumShifts\r\n            FROM Shifts\r\n            GROUP BY EmployeeID\r\n        ) AS AvgShiftsPerEmployee\r\n    )\r\n);\r\n"; // Replace YourTable with your actual table name
+            //Retrieve the names of employees who have worked more shifts than the average number of shifts worked by all employees.
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView5.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton9_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT *, (\r\n    SELECT COUNT(*)\r\n    FROM MenuItems\r\n    WHERE Category = Categories.Category\r\n) AS ItemCount\r\nFROM (\r\n    SELECT DISTINCT Category\r\n    FROM MenuItems\r\n) AS Categories;\r\n"; // Replace YourTable with your actual table name
+            //Count the number of menu items in each category.
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView6.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+
+        }
+
+        private void materialButton10_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT *\r\nFROM Tables\r\nWHERE Capacity >= (\r\n    SELECT NumberOfPeople\r\n    FROM Reservations\r\n    WHERE TableNumber = Tables.TableNumber\r\n);\r\n";
+            //Check if any table has available capacity for a reservation with a specified number of people.
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView7.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void materialButton11_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT E.EmployeeID, E.Username AS EmployeeName, \r\n       SUM(O.TotalAmount) AS TotalRevenue\r\nFROM Orders O\r\nJOIN Employees E ON O.EmployeeID = E.EmployeeID\r\nGROUP BY E.EmployeeID, E.Username\r\nHAVING SUM(O.TotalAmount) > 100;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView8.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void dataGridView8_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton12_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "\r\nSELECT C.CustomerID, C.Username AS CustomerName, SUM(O.TotalAmount) AS TotalSpent\r\nFROM Customers C\r\nJOIN Orders O ON C.CustomerID = O.CustomerID\r\nGROUP BY C.CustomerID, C.Username;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView9.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void dataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton13_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT O.OrderID, O.OrderDate, O.TotalAmount, O.Status,\r\n       E.EmployeeID, E.Username AS EmployeeUsername, E.Email AS EmployeeEmail\r\nFROM Orders O\r\nJOIN Employees E ON O.EmployeeID = E.EmployeeID;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView10.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void dataGridView10_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

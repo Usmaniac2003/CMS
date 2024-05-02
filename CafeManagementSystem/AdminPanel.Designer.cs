@@ -33,13 +33,29 @@
             this.admin_icons = new System.Windows.Forms.ImageList(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialTabControl3 = new MaterialSkin.Controls.MaterialTabControl();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.cartesianChart1 = new LiveCharts.Wpf.CartesianChart();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.materialButton9 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.materialButton10 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.inventoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuItemIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reorderThresholdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cafe1DataSet2 = new CafeManagementSystem.cafe1DataSet2();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.materialTabControl2 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -132,19 +148,30 @@
             this.employeesTableAdapter = new CafeManagementSystem.RMS2DataSetTableAdapters.EmployeesTableAdapter();
             this.employeesTableAdapter1 = new CafeManagementSystem.cafe1DataSetTableAdapters.EmployeesTableAdapter();
             this.menuItemsTableAdapter = new CafeManagementSystem.cafe1DataSet1TableAdapters.MenuItemsTableAdapter();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.cafe1DataSet2 = new CafeManagementSystem.cafe1DataSet2();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventoryTableAdapter = new CafeManagementSystem.cafe1DataSet2TableAdapters.InventoryTableAdapter();
-            this.inventoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuItemIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reorderThresholdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.materialButton11 = new MaterialSkin.Controls.MaterialButton();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.materialButton12 = new MaterialSkin.Controls.MaterialButton();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.materialButton13 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage1.SuspendLayout();
             this.materialTabControl3.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPage17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.materialTabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -154,6 +181,7 @@
             this.tabPage7.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.Items.SuspendLayout();
             this.materialTabControl4.SuspendLayout();
             this.tabPage11.SuspendLayout();
@@ -173,9 +201,11 @@
             this.materialTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rMS2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.tabPage18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            this.tabPage19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.SuspendLayout();
             // 
             // admin_icons
@@ -205,8 +235,12 @@
             // 
             // materialTabControl3
             // 
-            this.materialTabControl3.Controls.Add(this.tabPage9);
             this.materialTabControl3.Controls.Add(this.tabPage10);
+            this.materialTabControl3.Controls.Add(this.tabPage14);
+            this.materialTabControl3.Controls.Add(this.tabPage17);
+            this.materialTabControl3.Controls.Add(this.tabPage9);
+            this.materialTabControl3.Controls.Add(this.tabPage18);
+            this.materialTabControl3.Controls.Add(this.tabPage19);
             this.materialTabControl3.Depth = 0;
             this.materialTabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl3.Location = new System.Drawing.Point(0, 72);
@@ -218,39 +252,175 @@
             this.materialTabControl3.Size = new System.Drawing.Size(1717, 676);
             this.materialTabControl3.TabIndex = 1;
             // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.elementHost1);
-            this.tabPage9.Location = new System.Drawing.Point(4, 27);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage9.Size = new System.Drawing.Size(1709, 645);
-            this.tabPage9.TabIndex = 0;
-            this.tabPage9.Text = "Items Performace";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // elementHost1
-            // 
-            this.elementHost1.Location = new System.Drawing.Point(177, 75);
-            this.elementHost1.Margin = new System.Windows.Forms.Padding(4);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(1229, 411);
-            this.elementHost1.TabIndex = 0;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.elementHost1_ChildChanged_1);
-            this.elementHost1.Child = this.cartesianChart1;
-            // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.materialButton5);
+            this.tabPage10.Controls.Add(this.dataGridView4);
             this.tabPage10.Location = new System.Drawing.Point(4, 27);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage10.Size = new System.Drawing.Size(1709, 645);
             this.tabPage10.TabIndex = 1;
-            this.tabPage10.Text = "tabPage10";
+            this.tabPage10.Text = "Menu Item Price Analysis:";
             this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // materialButton5
+            // 
+            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton5.Depth = 0;
+            this.materialButton5.HighEmphasis = true;
+            this.materialButton5.Icon = null;
+            this.materialButton5.Location = new System.Drawing.Point(17, 588);
+            this.materialButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton5.Name = "materialButton5";
+            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton5.Size = new System.Drawing.Size(86, 36);
+            this.materialButton5.TabIndex = 1;
+            this.materialButton5.Text = "Analyze";
+            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton5.UseAccentColor = false;
+            this.materialButton5.UseVisualStyleBackColor = true;
+            this.materialButton5.Click += new System.EventHandler(this.materialButton5_Click);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(17, 17);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.Size = new System.Drawing.Size(833, 548);
+            this.dataGridView4.TabIndex = 0;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.materialButton8);
+            this.tabPage14.Controls.Add(this.dataGridView5);
+            this.tabPage14.Location = new System.Drawing.Point(4, 27);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Size = new System.Drawing.Size(1709, 645);
+            this.tabPage14.TabIndex = 2;
+            this.tabPage14.Text = "Employee Shift Analysis";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // materialButton8
+            // 
+            this.materialButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton8.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton8.Depth = 0;
+            this.materialButton8.HighEmphasis = true;
+            this.materialButton8.Icon = null;
+            this.materialButton8.Location = new System.Drawing.Point(14, 583);
+            this.materialButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton8.Name = "materialButton8";
+            this.materialButton8.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton8.Size = new System.Drawing.Size(86, 36);
+            this.materialButton8.TabIndex = 1;
+            this.materialButton8.Text = "Analyze";
+            this.materialButton8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton8.UseAccentColor = false;
+            this.materialButton8.UseVisualStyleBackColor = true;
+            this.materialButton8.Click += new System.EventHandler(this.materialButton8_Click);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(14, 17);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.Size = new System.Drawing.Size(863, 545);
+            this.dataGridView5.TabIndex = 0;
+            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.materialButton9);
+            this.tabPage17.Controls.Add(this.dataGridView6);
+            this.tabPage17.Location = new System.Drawing.Point(4, 27);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Size = new System.Drawing.Size(1709, 645);
+            this.tabPage17.TabIndex = 3;
+            this.tabPage17.Text = "Category Item Count Analysis";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // materialButton9
+            // 
+            this.materialButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton9.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton9.Depth = 0;
+            this.materialButton9.HighEmphasis = true;
+            this.materialButton9.Icon = null;
+            this.materialButton9.Location = new System.Drawing.Point(16, 591);
+            this.materialButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton9.Name = "materialButton9";
+            this.materialButton9.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton9.Size = new System.Drawing.Size(86, 36);
+            this.materialButton9.TabIndex = 1;
+            this.materialButton9.Text = "Analyze";
+            this.materialButton9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton9.UseAccentColor = false;
+            this.materialButton9.UseVisualStyleBackColor = true;
+            this.materialButton9.Click += new System.EventHandler(this.materialButton9_Click);
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(16, 21);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersWidth = 51;
+            this.dataGridView6.RowTemplate.Height = 24;
+            this.dataGridView6.Size = new System.Drawing.Size(895, 543);
+            this.dataGridView6.TabIndex = 0;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.materialButton10);
+            this.tabPage9.Controls.Add(this.dataGridView7);
+            this.tabPage9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Size = new System.Drawing.Size(1709, 645);
+            this.tabPage9.TabIndex = 0;
+            this.tabPage9.Text = "Reservation Capacity Analysis";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // materialButton10
+            // 
+            this.materialButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton10.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton10.Depth = 0;
+            this.materialButton10.HighEmphasis = true;
+            this.materialButton10.Icon = null;
+            this.materialButton10.Location = new System.Drawing.Point(17, 586);
+            this.materialButton10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton10.Name = "materialButton10";
+            this.materialButton10.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton10.Size = new System.Drawing.Size(86, 36);
+            this.materialButton10.TabIndex = 1;
+            this.materialButton10.Text = "Analyze";
+            this.materialButton10.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton10.UseAccentColor = false;
+            this.materialButton10.UseVisualStyleBackColor = true;
+            this.materialButton10.Click += new System.EventHandler(this.materialButton10_Click);
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Location = new System.Drawing.Point(17, 24);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.RowHeadersWidth = 51;
+            this.dataGridView7.RowTemplate.Height = 24;
+            this.dataGridView7.Size = new System.Drawing.Size(964, 553);
+            this.dataGridView7.TabIndex = 0;
             // 
             // materialTabSelector2
             // 
@@ -292,6 +462,76 @@
             this.tabPage4.Text = "Inventory Managment";
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.inventoryIDDataGridViewTextBoxColumn,
+            this.menuItemIDDataGridViewTextBoxColumn1,
+            this.stockLevelDataGridViewTextBoxColumn,
+            this.reorderThresholdDataGridViewTextBoxColumn,
+            this.lastUpdatedDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.inventoryBindingSource;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1717, 748);
+            this.dataGridView3.TabIndex = 1;
+            // 
+            // inventoryIDDataGridViewTextBoxColumn
+            // 
+            this.inventoryIDDataGridViewTextBoxColumn.DataPropertyName = "InventoryID";
+            this.inventoryIDDataGridViewTextBoxColumn.HeaderText = "InventoryID";
+            this.inventoryIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.inventoryIDDataGridViewTextBoxColumn.Name = "inventoryIDDataGridViewTextBoxColumn";
+            this.inventoryIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inventoryIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // menuItemIDDataGridViewTextBoxColumn1
+            // 
+            this.menuItemIDDataGridViewTextBoxColumn1.DataPropertyName = "MenuItemID";
+            this.menuItemIDDataGridViewTextBoxColumn1.HeaderText = "MenuItemID";
+            this.menuItemIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.menuItemIDDataGridViewTextBoxColumn1.Name = "menuItemIDDataGridViewTextBoxColumn1";
+            this.menuItemIDDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // stockLevelDataGridViewTextBoxColumn
+            // 
+            this.stockLevelDataGridViewTextBoxColumn.DataPropertyName = "StockLevel";
+            this.stockLevelDataGridViewTextBoxColumn.HeaderText = "StockLevel";
+            this.stockLevelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stockLevelDataGridViewTextBoxColumn.Name = "stockLevelDataGridViewTextBoxColumn";
+            this.stockLevelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // reorderThresholdDataGridViewTextBoxColumn
+            // 
+            this.reorderThresholdDataGridViewTextBoxColumn.DataPropertyName = "ReorderThreshold";
+            this.reorderThresholdDataGridViewTextBoxColumn.HeaderText = "ReorderThreshold";
+            this.reorderThresholdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.reorderThresholdDataGridViewTextBoxColumn.Name = "reorderThresholdDataGridViewTextBoxColumn";
+            this.reorderThresholdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastUpdatedDataGridViewTextBoxColumn
+            // 
+            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "LastUpdated";
+            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "LastUpdated";
+            this.lastUpdatedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
+            this.lastUpdatedDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "Inventory";
+            this.inventoryBindingSource.DataSource = this.cafe1DataSet2;
+            // 
+            // cafe1DataSet2
+            // 
+            this.cafe1DataSet2.DataSetName = "cafe1DataSet2";
+            this.cafe1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage3
             // 
@@ -752,6 +992,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.materialButton11);
+            this.tabPage2.Controls.Add(this.dataGridView8);
+            this.tabPage2.Controls.Add(this.materialLabel18);
             this.tabPage2.ImageKey = "sales.png";
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
@@ -831,7 +1074,7 @@
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(19, 17, 19, 17);
-            this.materialCard1.Size = new System.Drawing.Size(1309, 552);
+            this.materialCard1.Size = new System.Drawing.Size(1309, 546);
             this.materialCard1.TabIndex = 3;
             // 
             // materialCard5
@@ -1022,7 +1265,7 @@
             this.materialButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(19, 499);
+            this.materialButton1.Location = new System.Drawing.Point(19, 493);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -1623,79 +1866,137 @@
             // 
             this.menuItemsTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.inventoryIDDataGridViewTextBoxColumn,
-            this.menuItemIDDataGridViewTextBoxColumn1,
-            this.stockLevelDataGridViewTextBoxColumn,
-            this.reorderThresholdDataGridViewTextBoxColumn,
-            this.lastUpdatedDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.inventoryBindingSource;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1717, 748);
-            this.dataGridView3.TabIndex = 1;
-            // 
-            // cafe1DataSet2
-            // 
-            this.cafe1DataSet2.DataSetName = "cafe1DataSet2";
-            this.cafe1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "Inventory";
-            this.inventoryBindingSource.DataSource = this.cafe1DataSet2;
-            // 
             // inventoryTableAdapter
             // 
             this.inventoryTableAdapter.ClearBeforeFill = true;
             // 
-            // inventoryIDDataGridViewTextBoxColumn
+            // materialLabel18
             // 
-            this.inventoryIDDataGridViewTextBoxColumn.DataPropertyName = "InventoryID";
-            this.inventoryIDDataGridViewTextBoxColumn.HeaderText = "InventoryID";
-            this.inventoryIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.inventoryIDDataGridViewTextBoxColumn.Name = "inventoryIDDataGridViewTextBoxColumn";
-            this.inventoryIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inventoryIDDataGridViewTextBoxColumn.Width = 125;
+            this.materialLabel18.AutoSize = true;
+            this.materialLabel18.Depth = 0;
+            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel18.Location = new System.Drawing.Point(17, 16);
+            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel18.Name = "materialLabel18";
+            this.materialLabel18.Size = new System.Drawing.Size(173, 19);
+            this.materialLabel18.TabIndex = 0;
+            this.materialLabel18.Text = "Sales by Each Employee";
             // 
-            // menuItemIDDataGridViewTextBoxColumn1
+            // dataGridView8
             // 
-            this.menuItemIDDataGridViewTextBoxColumn1.DataPropertyName = "MenuItemID";
-            this.menuItemIDDataGridViewTextBoxColumn1.HeaderText = "MenuItemID";
-            this.menuItemIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.menuItemIDDataGridViewTextBoxColumn1.Name = "menuItemIDDataGridViewTextBoxColumn1";
-            this.menuItemIDDataGridViewTextBoxColumn1.Width = 125;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Location = new System.Drawing.Point(20, 67);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.RowHeadersWidth = 51;
+            this.dataGridView8.RowTemplate.Height = 24;
+            this.dataGridView8.Size = new System.Drawing.Size(931, 491);
+            this.dataGridView8.TabIndex = 1;
+            this.dataGridView8.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView8_CellContentClick);
             // 
-            // stockLevelDataGridViewTextBoxColumn
+            // materialButton11
             // 
-            this.stockLevelDataGridViewTextBoxColumn.DataPropertyName = "StockLevel";
-            this.stockLevelDataGridViewTextBoxColumn.HeaderText = "StockLevel";
-            this.stockLevelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stockLevelDataGridViewTextBoxColumn.Name = "stockLevelDataGridViewTextBoxColumn";
-            this.stockLevelDataGridViewTextBoxColumn.Width = 125;
+            this.materialButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton11.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton11.Depth = 0;
+            this.materialButton11.HighEmphasis = true;
+            this.materialButton11.Icon = null;
+            this.materialButton11.Location = new System.Drawing.Point(20, 577);
+            this.materialButton11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton11.Name = "materialButton11";
+            this.materialButton11.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton11.Size = new System.Drawing.Size(166, 36);
+            this.materialButton11.TabIndex = 2;
+            this.materialButton11.Text = "materialButton11";
+            this.materialButton11.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton11.UseAccentColor = false;
+            this.materialButton11.UseVisualStyleBackColor = true;
+            this.materialButton11.Click += new System.EventHandler(this.materialButton11_Click);
             // 
-            // reorderThresholdDataGridViewTextBoxColumn
+            // tabPage18
             // 
-            this.reorderThresholdDataGridViewTextBoxColumn.DataPropertyName = "ReorderThreshold";
-            this.reorderThresholdDataGridViewTextBoxColumn.HeaderText = "ReorderThreshold";
-            this.reorderThresholdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.reorderThresholdDataGridViewTextBoxColumn.Name = "reorderThresholdDataGridViewTextBoxColumn";
-            this.reorderThresholdDataGridViewTextBoxColumn.Width = 125;
+            this.tabPage18.Controls.Add(this.materialButton12);
+            this.tabPage18.Controls.Add(this.dataGridView9);
+            this.tabPage18.Location = new System.Drawing.Point(4, 27);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(1709, 645);
+            this.tabPage18.TabIndex = 4;
+            this.tabPage18.Text = "Total Amount Spent By Customers";
+            this.tabPage18.UseVisualStyleBackColor = true;
             // 
-            // lastUpdatedDataGridViewTextBoxColumn
+            // dataGridView9
             // 
-            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "LastUpdated";
-            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "LastUpdated";
-            this.lastUpdatedDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
-            this.lastUpdatedDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Location = new System.Drawing.Point(20, 19);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.RowHeadersWidth = 51;
+            this.dataGridView9.RowTemplate.Height = 24;
+            this.dataGridView9.Size = new System.Drawing.Size(766, 403);
+            this.dataGridView9.TabIndex = 0;
+            this.dataGridView9.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView9_CellContentClick);
+            // 
+            // materialButton12
+            // 
+            this.materialButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton12.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton12.Depth = 0;
+            this.materialButton12.HighEmphasis = true;
+            this.materialButton12.Icon = null;
+            this.materialButton12.Location = new System.Drawing.Point(20, 451);
+            this.materialButton12.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton12.Name = "materialButton12";
+            this.materialButton12.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton12.Size = new System.Drawing.Size(86, 36);
+            this.materialButton12.TabIndex = 1;
+            this.materialButton12.Text = "Analyze";
+            this.materialButton12.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton12.UseAccentColor = false;
+            this.materialButton12.UseVisualStyleBackColor = true;
+            this.materialButton12.Click += new System.EventHandler(this.materialButton12_Click);
+            // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.materialButton13);
+            this.tabPage19.Controls.Add(this.dataGridView10);
+            this.tabPage19.Location = new System.Drawing.Point(4, 27);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Size = new System.Drawing.Size(1709, 645);
+            this.tabPage19.TabIndex = 5;
+            this.tabPage19.Text = "Orders Handled By Each Employee";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView10
+            // 
+            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView10.Location = new System.Drawing.Point(14, 16);
+            this.dataGridView10.Name = "dataGridView10";
+            this.dataGridView10.RowHeadersWidth = 51;
+            this.dataGridView10.RowTemplate.Height = 24;
+            this.dataGridView10.Size = new System.Drawing.Size(1127, 443);
+            this.dataGridView10.TabIndex = 0;
+            this.dataGridView10.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView10_CellContentClick);
+            // 
+            // materialButton13
+            // 
+            this.materialButton13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton13.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton13.Depth = 0;
+            this.materialButton13.HighEmphasis = true;
+            this.materialButton13.Icon = null;
+            this.materialButton13.Location = new System.Drawing.Point(14, 486);
+            this.materialButton13.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton13.Name = "materialButton13";
+            this.materialButton13.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton13.Size = new System.Drawing.Size(166, 36);
+            this.materialButton13.TabIndex = 1;
+            this.materialButton13.Text = "Analyze";
+            this.materialButton13.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton13.UseAccentColor = false;
+            this.materialButton13.UseVisualStyleBackColor = true;
+            this.materialButton13.Click += new System.EventHandler(this.materialButton13_Click);
             // 
             // AdminPanel
             // 
@@ -1716,8 +2017,22 @@
             this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.tabPage1.ResumeLayout(false);
             this.materialTabControl3.ResumeLayout(false);
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage14.ResumeLayout(false);
+            this.tabPage14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPage17.ResumeLayout(false);
+            this.tabPage17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.materialTabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
@@ -1729,6 +2044,8 @@
             this.materialCard2.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.Items.ResumeLayout(false);
             this.materialTabControl4.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
@@ -1754,9 +2071,13 @@
             this.materialTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rMS2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.tabPage18.ResumeLayout(false);
+            this.tabPage18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            this.tabPage19.ResumeLayout(false);
+            this.tabPage19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.ResumeLayout(false);
 
             }
@@ -1780,8 +2101,6 @@
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.TabPage tabPage10;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector2;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private LiveCharts.Wpf.CartesianChart cartesianChart1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialTextBox emp_name;
@@ -1873,5 +2192,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reorderThresholdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
+        private MaterialSkin.Controls.MaterialButton materialButton5;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.TabPage tabPage14;
+        private System.Windows.Forms.TabPage tabPage17;
+        private MaterialSkin.Controls.MaterialButton materialButton8;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private MaterialSkin.Controls.MaterialButton materialButton9;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private MaterialSkin.Controls.MaterialButton materialButton10;
+        private System.Windows.Forms.DataGridView dataGridView7;
+        private MaterialSkin.Controls.MaterialButton materialButton11;
+        private System.Windows.Forms.DataGridView dataGridView8;
+        private MaterialSkin.Controls.MaterialLabel materialLabel18;
+        private System.Windows.Forms.TabPage tabPage18;
+        private MaterialSkin.Controls.MaterialButton materialButton12;
+        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.TabPage tabPage19;
+        private MaterialSkin.Controls.MaterialButton materialButton13;
+        private System.Windows.Forms.DataGridView dataGridView10;
     }
     }
