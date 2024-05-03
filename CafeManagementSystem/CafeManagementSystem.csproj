@@ -107,6 +107,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cafe1DataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cafe1DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafe1DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +222,28 @@
     </None>
     <None Include="cafe1DataSet5.xss">
       <DependentUpon>cafe1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet6.xsc">
+      <DependentUpon>cafe1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet6.xss">
+      <DependentUpon>cafe1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet7.xsc">
+      <DependentUpon>cafe1DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet7.xss">
+      <DependentUpon>cafe1DataSet7.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -26,6 +26,8 @@ namespace CafeManagementSystem
 
         private void SalesmanPanel_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cafe1DataSet.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this.cafe1DataSet.Employees);
 
         }
 

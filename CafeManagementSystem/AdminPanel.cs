@@ -240,6 +240,10 @@ namespace CafeManagementSystem
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cafe1DataSet7.MenuItems' table. You can move, or remove it, as needed.
+            this.menuItemsTableAdapter1.Fill(this.cafe1DataSet7.MenuItems);
+            // TODO: This line of code loads data into the 'cafe1DataSet6.Inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter1.Fill(this.cafe1DataSet6.Inventory);
             // TODO: This line of code loads data into the 'cafe1DataSet2.Inventory' table. You can move, or remove it, as needed.
             this.inventoryTableAdapter.Fill(this.cafe1DataSet2.Inventory);
             // TODO: This line of code loads data into the 'cafe1DataSet1.MenuItems' table. You can move, or remove it, as needed.
@@ -673,6 +677,44 @@ namespace CafeManagementSystem
         }
 
         private void dataGridView10_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton6_Click(object sender, EventArgs e)
+        {
+            string search = itemSearch.Text;
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT * FROM Menuitems WHERE [Name] LIKE '%' + @Search + '%' OR Description LIKE '%' + @Search + '%'";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Search", search);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView11.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void dataGridView11_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialTabSelector4_Click(object sender, EventArgs e)
         {
 
         }
