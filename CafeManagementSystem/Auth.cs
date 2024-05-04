@@ -166,8 +166,10 @@ namespace CafeManagementSystem
 
                     if (reader.Read())
                     {
+                        int adminId = reader.GetInt32(reader.GetOrdinal("AdminID"));
+
                         // Admin found, redirect to AdminPanel
-                        AdminPanel adminPanel = new AdminPanel();
+                        AdminPanel adminPanel = new AdminPanel(adminId);
                         adminPanel.Show();
                         this.Hide();
                         return;
@@ -180,8 +182,9 @@ namespace CafeManagementSystem
 
                     if (reader.Read())
                     {
+                    int EmployeeId = reader.GetInt32(reader.GetOrdinal("EmployeeId"));
                         // Employee found, redirect to EmployeePanel
-                        SalesmanPanel employeePanel = new SalesmanPanel();
+                        SalesmanPanel employeePanel = new SalesmanPanel(EmployeeId);
                         employeePanel.Show();
                         this.Hide();
                         return;
@@ -194,8 +197,9 @@ namespace CafeManagementSystem
 
                     if (reader.Read())
                     {
+                    int CustomerId = reader.GetInt32(reader.GetOrdinal("CustomerId"));
                         // Customer found, redirect to CustomerPanel
-                        CustomerPanel customerPanel = new CustomerPanel();
+                        CustomerPanel customerPanel = new CustomerPanel(CustomerId);
                         customerPanel.Show();
                         this.Hide();
                         return;

@@ -117,6 +117,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cafe1DataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cafe1DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafe1DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +163,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SalesmanPanel.resx">
       <DependentUpon>SalesmanPanel.cs</DependentUpon>
@@ -245,6 +256,28 @@
     <None Include="cafe1DataSet7.xss">
       <DependentUpon>cafe1DataSet7.xsd</DependentUpon>
     </None>
+    <None Include="cafe1DataSet8.xsc">
+      <DependentUpon>cafe1DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet8.xss">
+      <DependentUpon>cafe1DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet9.xsc">
+      <DependentUpon>cafe1DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet9.xss">
+      <DependentUpon>cafe1DataSet9.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -269,6 +302,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-point-of-sale-68.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

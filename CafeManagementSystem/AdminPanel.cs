@@ -14,13 +14,19 @@ namespace CafeManagementSystem
 {
     public partial class AdminPanel : MaterialForm
     {
-        public AdminPanel()
+        int Adminid;
+        public AdminPanel(int AdminId)
         {
+            Adminid = AdminId;
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
+            string adminName = GetAdminName(Adminid); // adminId should be accessible here
+            materialTextBox5.Text = adminName;
+            string email = GetAdminEmail(Adminid);
+            materialTextBox6.Text = email;
         }
 
         private void materialListView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -566,7 +572,7 @@ namespace CafeManagementSystem
         private void materialButton10_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
-            string query = "SELECT *\r\nFROM Tables\r\nWHERE Capacity >= (\r\n    SELECT NumberOfPeople\r\n    FROM Reservations\r\n    WHERE TableNumber = Tables.TableNumber\r\n);\r\n";
+            string query = "SELECT *\r\nFROM Tables\r\nWHERE Capacity >= (\r\n    SELECT MAX(NumberOfPeople)\r\n    FROM Reservations\r\n    WHERE TableNumber = Tables.TableNumber\r\n);\r\n";
             //Check if any table has available capacity for a reservation with a specified number of people.
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -717,6 +723,511 @@ namespace CafeManagementSystem
         private void materialTabSelector4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void elementHost1_ChildChanged_2(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
+
+        private void materialButton16_Click(object sender, EventArgs e)
+        {
+            // Close the current form
+            this.Hide();
+
+            // Show the authentication form
+            Auth authForm = new Auth();
+            authForm.Show();
+        }
+
+
+        private string GetAdminName(int adminId)
+        {
+            string adminName = "";
+
+            // Your database query to retrieve Admin name based on Admin ID
+            string query = "SELECT Username FROM Admins WHERE AdminID = @AdminID";
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@AdminID", adminId);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Retrieve the admin name from the reader
+                        adminName = reader.GetString(reader.GetOrdinal("Username"));
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            return adminName;
+        }
+        private string GetAdminEmail(int adminId)
+        {
+            string adminName = "";
+
+            // Your database query to retrieve Admin name based on Admin ID
+            string query = "SELECT Email FROM Admins WHERE AdminID = @AdminID";
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@AdminID", adminId);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Retrieve the admin name from the reader
+                        adminName = reader.GetString(reader.GetOrdinal("Email"));
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            return adminName;
+        }
+
+        private void materialLabel28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialCard9_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialTabSelector4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton5_Click_1(object sender, EventArgs e)
+        {
+
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT *\r\nFROM MenuItems\r\nWHERE Price > (\r\n    SELECT AVG(Price)\r\n    FROM MenuItems\r\n);\r\n"; // Replace YourTable with your actual table name
+            //Retrieve the names of menu items that have a price higher than the average price of all menu items. SubQuery-1
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView4.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void materialButton8_Click_1(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT *\r\nFROM Employees\r\nWHERE EmployeeID IN (\r\n    SELECT EmployeeID\r\n    FROM (\r\n        SELECT EmployeeID, COUNT(*) AS NumShifts\r\n        FROM Shifts\r\n        GROUP BY EmployeeID\r\n    ) AS EmployeeShiftCounts\r\n    WHERE NumShifts > (\r\n        SELECT AVG(NumShifts)\r\n        FROM (\r\n            SELECT COUNT(*) AS NumShifts\r\n            FROM Shifts\r\n            GROUP BY EmployeeID\r\n        ) AS AvgShiftsPerEmployee\r\n    )\r\n);\r\n"; // Replace YourTable with your actual table name
+            //Retrieve the names of employees who have worked more shifts than the average number of shifts worked by all employees.
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView5.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void materialButton9_Click_1(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT *, (\r\n    SELECT COUNT(*)\r\n    FROM MenuItems\r\n    WHERE Category = Categories.Category\r\n) AS ItemCount\r\nFROM (\r\n    SELECT DISTINCT Category\r\n    FROM MenuItems\r\n) AS Categories;\r\n"; // Replace YourTable with your actual table name
+            //Count the number of menu items in each category.
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView6.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+
+        }
+
+        private void materialButton13_Click_1(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT O.OrderID, O.OrderDate, O.TotalAmount, O.Status,\r\n       E.EmployeeID, E.Username AS EmployeeUsername, E.Email AS EmployeeEmail\r\nFROM Orders O\r\nJOIN Employees E ON O.EmployeeID = E.EmployeeID;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView10.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void materialTabSelector5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton17_Click(object sender, EventArgs e)
+        {
+
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT \r\n    mi.Name AS MenuItem,\r\n    SUM(od.Quantity) AS TotalQuantitySold,\r\n    SUM(od.Quantity * od.UnitPrice) AS TotalRevenue\r\nFROM \r\n    OrderDetails AS od\r\nINNER JOIN \r\n    MenuItems AS mi ON od.MenuItemID = mi.MenuItemID\r\nINNER JOIN \r\n    Orders AS o ON od.OrderID = o.OrderID\r\nWHERE \r\n    o.OrderDate >= DATEADD(MONTH, -1, GETDATE())  -- Last month's data\r\nGROUP BY \r\n    mi.Name\r\nORDER BY \r\n    TotalRevenue DESC\r\n";
+            //Retrieve the names of menu items that have a price higher than the average price of all menu items. SubQuery-1
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView14.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void dataGridView14_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton18_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT \r\n    o.OrderID,\r\n    o.OrderDate,\r\n    e.Username AS EmployeeName,\r\n    s.ShiftDate,\r\n    s.StartTime,\r\n    s.EndTime\r\nFROM \r\n    Orders AS o\r\nINNER JOIN \r\n    Employees AS e ON o.EmployeeID = e.EmployeeID\r\nINNER JOIN \r\n    Shifts AS s ON e.EmployeeID = s.EmployeeID\r\nWHERE \r\n    s.ShiftDate = CAST(o.OrderDate AS DATE)  -- Ensure orders match shifts\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView15.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void dataGridView15_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton19_Click(object sender, EventArgs e)
+        {
+
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT \r\n    mi.Name AS MenuItemName,\r\n    i.StockLevel,\r\n    i.ReorderThreshold,\r\n    SUM(od.Quantity) AS TotalUsed,\r\n    MAX(i.LastUpdated) AS LastUpdated\r\nFROM \r\n    Inventory AS i\r\nINNER JOIN \r\n    MenuItems AS mi ON i.MenuItemID = mi.MenuItemID\r\nINNER JOIN \r\n    OrderDetails AS od ON mi.MenuItemID = od.MenuItemID\r\nGROUP BY \r\n    mi.Name, \r\n    i.StockLevel, \r\n    i.ReorderThreshold\r\n";
+            //Retrieve the names of menu items that have a price higher than the average price of all menu items. SubQuery-1
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView16.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void dataGridView16_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton20_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT\r\n    o.OrderID,\r\n    o.OrderDate,\r\n    c.Username AS CustomerName,\r\n    e.Username AS EmployeeName,\r\n    mi.Name AS MenuItemName,\r\n    od.Quantity,\r\n    od.UnitPrice,\r\n    (od.Quantity * od.UnitPrice) AS Subtotal\r\nFROM\r\n    Orders AS o\r\nINNER JOIN\r\n    Customers AS c ON o.CustomerID = c.CustomerID\r\nLEFT JOIN\r\n    Employees AS e ON o.EmployeeID = e.EmployeeID\r\nINNER JOIN\r\n    OrderDetails AS od ON o.OrderID = od.OrderID\r\nINNER JOIN\r\n    MenuItems AS mi ON od.MenuItemID = mi.MenuItemID\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView17.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void dataGridView17_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton21_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT\r\n    p.PaymentID,\r\n    p.PaymentDate,\r\n    p.PaymentMethod,\r\n    p.Amount,\r\n    c.Username AS CustomerName,\r\n    o.OrderID,\r\n    od.Quantity,\r\n    mi.Name AS MenuItemName\r\nFROM\r\n    Payments AS p\r\nINNER JOIN\r\n    Orders AS o ON p.OrderID = o.OrderID\r\nINNER JOIN\r\n    Customers AS c ON o.CustomerID = c.CustomerID\r\nINNER JOIN\r\n    OrderDetails AS od ON o.OrderID = od.OrderID\r\nINNER JOIN\r\n    MenuItems AS mi ON od.MenuItemID = mi.MenuItemID\r\n";
+            //Check if any table has available capacity for a reservation with a specified number of people.
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView18.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void dataGridView18_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton22_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT C.CustomerID,C.Username, COALESCE(O.OrderCount, 0) AS OrderCount\r\nFROM Customers C\r\n JOIN (\r\n    SELECT CustomerID, COUNT(*) AS OrderCount\r\n    FROM Orders\r\n    GROUP BY CustomerID\r\n    HAVING COUNT(*) > 0 \r\n) O ON C.CustomerID = O.CustomerID;\r\n;";//Analyzes Customer Order Count
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView19.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void dataGridView19_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton23_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT R.TableNumber, COUNT(*) AS ReservationCount, \r\n       STRING_AGG(C.Username, ', ') AS ReservedBy\r\nFROM Reservations R\r\nJOIN Customers C ON R.CustomerID = C.CustomerID\r\nGROUP BY R.TableNumber\r\nHAVING COUNT(*) > 0;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView20.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+
+        }
+
+        private void materialButton24_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT [Role], AVG(Salary) AS AvgSalary\r\nFROM Employees\r\nGROUP BY [Role]\r\nHAVING AVG(Salary) > 3000;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView21.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void dataGridView21_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton25_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT E.EmployeeID, E.Username AS EmployeeName, SUM(OD.Quantity) AS TotalItemsSold\r\nFROM Employees E\r\nJOIN Orders O ON E.EmployeeID = O.EmployeeID\r\nJOIN OrderDetails OD ON O.OrderID = OD.OrderID\r\nGROUP BY E.EmployeeID, E.Username;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView22.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
         }
     }
 }
