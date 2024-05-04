@@ -40,6 +40,7 @@
             this.login = new MaterialSkin.Controls.MaterialButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.username_register = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -50,7 +51,6 @@
             this.password_register = new MaterialSkin.Controls.MaterialTextBox();
             this.register = new MaterialSkin.Controls.MaterialButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -67,7 +67,7 @@
             this.materialTabControl1.ImageList = this.imageList1;
             this.materialTabControl1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
-            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
@@ -80,9 +80,9 @@
             this.tabPage1.Controls.Add(this.materialCard1);
             this.tabPage1.ImageKey = "icons8-login-64.png";
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1319, 861);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
@@ -99,7 +99,7 @@
             this.materialCard1.Controls.Add(this.login);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(371, 64);
+            this.materialCard1.Location = new System.Drawing.Point(719, 239);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
@@ -115,7 +115,7 @@
             this.username_login.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.username_login.LeadingIcon = null;
             this.username_login.Location = new System.Drawing.Point(19, 80);
-            this.username_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.username_login.Margin = new System.Windows.Forms.Padding(4);
             this.username_login.MaxLength = 50;
             this.username_login.MouseState = MaterialSkin.MouseState.OUT;
             this.username_login.Multiline = false;
@@ -160,7 +160,7 @@
             this.password_login.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.password_login.LeadingIcon = null;
             this.password_login.Location = new System.Drawing.Point(23, 251);
-            this.password_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password_login.Margin = new System.Windows.Forms.Padding(4);
             this.password_login.MaxLength = 50;
             this.password_login.MouseState = MaterialSkin.MouseState.OUT;
             this.password_login.Multiline = false;
@@ -197,9 +197,9 @@
             this.tabPage2.Controls.Add(this.materialCard2);
             this.tabPage2.ImageKey = "icons8-sign-up-80.png";
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1319, 861);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sign up";
@@ -224,7 +224,7 @@
             this.materialCard2.Controls.Add(this.register);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(356, 46);
+            this.materialCard2.Location = new System.Drawing.Point(372, 150);
             this.materialCard2.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
@@ -232,6 +232,18 @@
             this.materialCard2.Size = new System.Drawing.Size(630, 592);
             this.materialCard2.TabIndex = 1;
             this.materialCard2.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard2_Paint);
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel8.Location = new System.Drawing.Point(28, 250);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(56, 19);
+            this.materialLabel8.TabIndex = 17;
+            this.materialLabel8.Text = "Contact";
             // 
             // username_register
             // 
@@ -241,7 +253,7 @@
             this.username_register.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.username_register.LeadingIcon = null;
             this.username_register.Location = new System.Drawing.Point(19, 55);
-            this.username_register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.username_register.Margin = new System.Windows.Forms.Padding(4);
             this.username_register.MaxLength = 50;
             this.username_register.MouseState = MaterialSkin.MouseState.OUT;
             this.username_register.Multiline = false;
@@ -288,7 +300,7 @@
             this.email.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.email.LeadingIcon = null;
             this.email.Location = new System.Drawing.Point(19, 176);
-            this.email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.email.Margin = new System.Windows.Forms.Padding(4);
             this.email.MaxLength = 50;
             this.email.MouseState = MaterialSkin.MouseState.OUT;
             this.email.Multiline = false;
@@ -306,7 +318,7 @@
             this.contact.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.contact.LeadingIcon = null;
             this.contact.Location = new System.Drawing.Point(19, 287);
-            this.contact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contact.Margin = new System.Windows.Forms.Padding(4);
             this.contact.MaxLength = 50;
             this.contact.MouseState = MaterialSkin.MouseState.OUT;
             this.contact.Multiline = false;
@@ -349,7 +361,7 @@
             this.password_register.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.password_register.LeadingIcon = null;
             this.password_register.Location = new System.Drawing.Point(19, 405);
-            this.password_register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password_register.Margin = new System.Windows.Forms.Padding(4);
             this.password_register.MaxLength = 50;
             this.password_register.MouseState = MaterialSkin.MouseState.OUT;
             this.password_register.Multiline = false;
@@ -390,18 +402,6 @@
             this.imageList1.Images.SetKeyName(2, "icons8-sign-up-80.png");
             this.imageList1.Images.SetKeyName(3, "icons8-login-64.png");
             // 
-            // materialLabel8
-            // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel8.Location = new System.Drawing.Point(28, 250);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(56, 19);
-            this.materialLabel8.TabIndex = 17;
-            this.materialLabel8.Text = "Contact";
-            // 
             // Auth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -416,7 +416,7 @@
             this.Name = "Auth";
             this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Sizable = false;
-            this.Text = "Authantication";
+            this.Text = "Authentication";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

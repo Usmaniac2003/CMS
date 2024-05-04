@@ -87,6 +87,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cafe1DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cafe1DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafe1DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafe1DataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cafe1DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,6 +143,7 @@
     <Compile Include="CustomerPanel.Designer.cs">
       <DependentUpon>CustomerPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="LiveCharts\Wpf\BarLabelPosition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RMS2DataSet.Designer.cs">
@@ -189,6 +200,28 @@
     </None>
     <None Include="cafe1DataSet1.xss">
       <DependentUpon>cafe1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet10.xsc">
+      <DependentUpon>cafe1DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet10.xss">
+      <DependentUpon>cafe1DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet11.xsc">
+      <DependentUpon>cafe1DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="cafe1DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafe1DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafe1DataSet11.xss">
+      <DependentUpon>cafe1DataSet11.xsd</DependentUpon>
     </None>
     <None Include="cafe1DataSet2.xsc">
       <DependentUpon>cafe1DataSet2.xsd</DependentUpon>

@@ -29,6 +29,7 @@ namespace CafeManagementSystem
             materialTextBox5.Text = Name;
             string email = GetCustomerEmail(CustomerId);
             materialTextBox6.Text = email;
+            this.WindowState = FormWindowState.Maximized;
 
         }
         // Function to retrieve Customer name from the database based on Customer ID

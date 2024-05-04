@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Data.SqlClient;
+using LiveCharts.Wpf;
+using LiveCharts;
+using LiveCharts.WinForms;
+
 namespace CafeManagementSystem
 {
     public partial class AdminPanel : MaterialForm
@@ -27,6 +31,7 @@ namespace CafeManagementSystem
             materialTextBox5.Text = adminName;
             string email = GetAdminEmail(Adminid);
             materialTextBox6.Text = email;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void materialListView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -246,6 +251,10 @@ namespace CafeManagementSystem
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cafe1DataSet11.MenuItems' table. You can move, or remove it, as needed.
+            this.menuItemsTableAdapter2.Fill(this.cafe1DataSet11.MenuItems);
+            // TODO: This line of code loads data into the 'cafe1DataSet10.Inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter2.Fill(this.cafe1DataSet10.Inventory);
             // TODO: This line of code loads data into the 'cafe1DataSet7.MenuItems' table. You can move, or remove it, as needed.
             this.menuItemsTableAdapter1.Fill(this.cafe1DataSet7.MenuItems);
             // TODO: This line of code loads data into the 'cafe1DataSet6.Inventory' table. You can move, or remove it, as needed.
@@ -1229,5 +1238,437 @@ namespace CafeManagementSystem
 
             }
         }
+
+        private void materialTabSelector2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTabSelector7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTabSelector9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTabSelector10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton14_Click(object sender, EventArgs e)
+        {
+            // Variables for conversion results
+            int menuID;
+            int stockLevel;
+            int reorderThreshold;
+
+            // Attempt to convert text to integers
+            bool isMenuIDValid = int.TryParse(menuitemid.Text, out menuID);
+            bool isStockLevelValid = int.TryParse(stocklevel.Text, out stockLevel);
+            bool isReorderThresholdValid = int.TryParse(reorderthreshold.Text, out reorderThreshold);
+
+            // Validate all conversions
+            if (isMenuIDValid && isStockLevelValid && isReorderThresholdValid)
+            {
+                // All conversions succeeded, add to Inventory
+                try
+                {
+                    // Connection string for your database
+                    string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Insert into Inventory
+                        string query = @"
+                            INSERT INTO Inventory (MenuItemID, StockLevel, ReorderThreshold, LastUpdated)
+                            VALUES (@MenuItemID, @StockLevel, @ReorderThreshold, GETDATE())";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@MenuItemID", menuID);
+                            command.Parameters.AddWithValue("@StockLevel", stockLevel);
+                            command.Parameters.AddWithValue("@ReorderThreshold", reorderThreshold);
+
+                            command.ExecuteNonQuery();  // Execute the SQL command
+                        }
+                    }
+
+                    MessageBox.Show("Inventory updated successfully.", "Success");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show($"Database error: {ex.Message}", "Error");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error");
+                }
+            }
+            else
+            {
+                // If any conversion fails, show an error message
+                MessageBox.Show("Invalid input. Please ensure all fields contain valid integers.", "Error");
+            }
+        }
+
+        private void elementHost1_ChildChanged_3(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+            CreatePieChartForCatagorySales();
+        }
+
+        private void CreatePieChartForCatagorySales()
+        {
+            // Create an instance of the PieChart control
+            LiveCharts.WinForms.PieChart pieChart = new LiveCharts.WinForms.PieChart();
+
+            // Clear existing series
+            pieChart.Series.Clear();
+
+            // Retrieve data from the database
+            DataTable data = GetDataForPieChartForSales();
+
+            // Create new series
+            LiveCharts.SeriesCollection seriesCollection = new LiveCharts.SeriesCollection();
+
+            foreach (DataRow row in data.Rows)
+            {
+                seriesCollection.Add(new LiveCharts.Wpf.PieSeries
+                {
+                    Title = row["Category"].ToString(),
+                    Values = new LiveCharts.ChartValues<double> { Convert.ToDouble(row["TotalSales"]) },
+                    DataLabels = true
+                });
+            }
+
+       
+            pieChart.Series = seriesCollection;
+
+
+            pieChart.Width = materialCard13.Width-5;
+            pieChart.Height = materialCard13.Height-5;
+            pieChart.Parent = materialCard13;
+        }
+
+        private void CreatePieChartForEmployeeSalaries()
+        {
+            // Create an instance of the PieChart control
+            LiveCharts.WinForms.PieChart pieChart = new LiveCharts.WinForms.PieChart();
+
+            // Clear existing series
+            pieChart.Series.Clear();
+
+            // Retrieve data from the database
+            DataTable data = GetDataForPieChartForSalaries();
+
+            // Create new series
+            LiveCharts.SeriesCollection seriesCollection = new LiveCharts.SeriesCollection();
+
+            foreach (DataRow row in data.Rows)
+            {
+                seriesCollection.Add(new LiveCharts.Wpf.PieSeries
+                {
+                    Title = row["Role"].ToString(),
+                    Values = new LiveCharts.ChartValues<double> { Convert.ToDouble(row["TotalSalary"]) },
+                    DataLabels = true
+                });
+            }
+
+
+            pieChart.Series = seriesCollection;
+
+            pieChart.Parent = materialCard14;
+            pieChart.Width = materialCard14.Width - 5;
+            pieChart.Height = materialCard14.Height - 5;
+            
+        }
+
+
+        private DataTable GetDataForPieChartForSales()
+        {
+            DataTable data = new DataTable();
+            string query = "SELECT Category, TotalSales FROM SalesByCategory";
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+            {
+                adapter.Fill(data);
+            }
+
+            return data;
+        }
+
+        private DataTable GetDataForPieChartForSalaries()
+        {
+            DataTable data = new DataTable();
+            string query = "Select Role ,TotalSalary from  SalariesByRole;";
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+            {
+                adapter.Fill(data);
+            }
+
+            return data;
+        }
+        private void CreatePieChartForPriceRange()
+        {
+            // Create an instance of the PieChart control
+            LiveCharts.WinForms.PieChart pieChart = new LiveCharts.WinForms.PieChart();
+
+            // Clear existing series
+            pieChart.Series.Clear();
+
+            // Retrieve data from the database
+            DataTable data = getDataForPieOrdersByPriceRange();
+
+            // Create new series
+            LiveCharts.SeriesCollection seriesCollection = new LiveCharts.SeriesCollection();
+
+            foreach (DataRow row in data.Rows)
+            {
+                seriesCollection.Add(new LiveCharts.Wpf.PieSeries
+                {
+                    Title = row["PriceRange"].ToString(),
+                    Values = new LiveCharts.ChartValues<double> { Convert.ToDouble(row["OrderCount"]) },
+                    DataLabels = true
+                });
+            }
+
+
+            pieChart.Series = seriesCollection;
+
+            pieChart.Parent = materialCard15;
+            pieChart.Width = materialCard15.Width - 5;
+            pieChart.Height = materialCard15.Height - 5;
+
+        }
+        private DataTable getDataForPieOrdersByPriceRange()
+        {
+            DataTable data = new DataTable();
+            string query = "Select PriceRange,OrderCount from OrdersByPriceRange;";
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+            {
+                adapter.Fill(data);
+            }
+
+            return data;
+        }
+
+        private void materialTabSelector11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void elementHost2_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+            CreatePieChartForEmployeeSalaries();
+        }
+
+        private void materialCard15_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialCard13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void elementHost3_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+            CreatePieChartForPriceRange();
+        }
+
+        private void materialCard14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void CreateBarChart()
+        {
+            // Create an instance of the CartesianChart control (for bar charts)
+            LiveCharts.WinForms.CartesianChart barChart = new LiveCharts.WinForms.CartesianChart();
+
+            // Clear existing series
+            barChart.Series.Clear();
+
+            // Retrieve data from the database
+            DataTable data = GetShiftHoursData();
+
+            // Create new series for the bar chart
+            LiveCharts.Wpf.ColumnSeries columnSeries = new LiveCharts.Wpf.ColumnSeries
+            {
+                Title = "Total Hours Worked",
+                DataLabels = true,  // Display data labels on the bars
+                Values = new LiveCharts.ChartValues<double>(),  // To hold the bar chart values
+                LabelPoint = point => $"{point.Y}"  // Format data labels
+            };
+
+            // List of x-axis labels (roles)
+            List<string> roleLabels = new List<string>();
+
+            // Populate the series and the list of roles
+            foreach (DataRow row in data.Rows)
+            {
+                double hours = Convert.ToDouble(row["TotalHours"]);
+                columnSeries.Values.Add(hours);
+
+                // Add the role name to the list of x-axis labels
+                string roleName = row["Role"].ToString();
+                roleLabels.Add(roleName);
+            }
+
+            // Add the series to the chart
+            barChart.Series.Add(columnSeries);
+
+            // Set the x-axis with the role labels
+            barChart.AxisX.Clear();  // Clear existing x-axis configurations
+            barChart.AxisX.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Roles",
+                Labels = roleLabels,  // Set x-axis labels to the list of roles
+                Separator = new LiveCharts.Wpf.Separator { Step = 1 }  // Ensure separation between labels
+            });
+
+            // Set y-axis title
+            barChart.AxisY.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Total Hours"
+            });
+
+            // Set the size and position of the bar chart relative to the parent control
+            barChart.Width = materialCard16.Width - 5;
+            barChart.Height = materialCard16.Height - 5;
+
+            // Set the bar chart's parent to materialCard15
+            barChart.Parent = materialCard16;
+        }
+
+
+        private DataTable GetShiftHoursData()
+        {
+            DataTable data = new DataTable();
+            string query = "Select Role,TotalHours from EmployeeHoursByRole";
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            // Update with your SQL Server connection string
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+            {
+                adapter.Fill(data);  // Fill the DataTable with the query result
+            }
+
+            return data;
+        }
+
+        private void elementHost4_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+            CreateBarChart();
+        }
+
+
+
+
+        private void customerOrderBarChart()
+        {
+            // Create an instance of the CartesianChart control (for bar charts)
+            LiveCharts.WinForms.CartesianChart barChart = new LiveCharts.WinForms.CartesianChart();
+
+            // Clear existing series
+            barChart.Series.Clear();
+
+            // Retrieve data from the database
+            DataTable data = getCustomerOrderBarData();
+
+            // Create a new series for the bar chart
+            LiveCharts.Wpf.ColumnSeries columnSeries = new LiveCharts.Wpf.ColumnSeries
+            {
+                Title = "Orders by Customer",
+                DataLabels = true,  // Display data labels on the bars
+                Values = new LiveCharts.ChartValues<double>(),  // To hold bar chart values
+                LabelPoint = point => point.Y.ToString(),  // Format data labels
+                MaxColumnWidth = 50  // Optional: Limit column width for better visualization
+            };
+
+            // List of x-axis labels (customer names)
+            List<string> customerNames = new List<string>();
+
+            // Populate the bar chart series and x-axis labels
+            foreach (DataRow row in data.Rows)
+            {
+                double orderCount = Convert.ToDouble(row["OrderCount"]);  // Get order count
+                columnSeries.Values.Add(orderCount);  // Add to series
+
+                string customerName = row["CustomerName"].ToString();  // Get customer name
+                customerNames.Add(customerName);  // Add to x-axis labels
+            }
+
+            // Add the column series to the bar chart
+            barChart.Series.Add(columnSeries);
+
+            // Set the x-axis with customer names
+            barChart.AxisX.Clear();  // Clear existing x-axis configurations
+            barChart.AxisX.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Customers",
+                Labels = customerNames,  // Set x-axis labels to customer names
+                Separator = new LiveCharts.Wpf.Separator { Step = 1 },  // Ensure labels are separated
+                LabelsRotation = 45  // Optional: Rotate labels for better readability
+            });
+
+            // Set the y-axis with a title
+            barChart.AxisY.Clear();
+            barChart.AxisY.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Order Count",
+                Separator = new LiveCharts.Wpf.Separator { Step = 1 }  // Ensure proper separation between values
+            });
+
+            // Set the size and position of the bar chart relative to the parent control
+            barChart.Width = materialCard17.Width - 5;
+            barChart.Height = materialCard17.Height - 5;
+
+            // Set the bar chart's parent to materialCard17
+            barChart.Parent = materialCard17;
+        }
+
+
+        private DataTable getCustomerOrderBarData()
+        {
+            DataTable data = new DataTable();
+            string query = "SELECT CustomerName,OrderCount from OrdersByCustomer";
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+            {
+                adapter.Fill(data);  // Fill the DataTable with the query result
+            }
+
+            return data;  // Return the DataTable for further processing
+        }
+
+        private void elementHost5_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+            customerOrderBarChart();
+        }
     }
 }
+

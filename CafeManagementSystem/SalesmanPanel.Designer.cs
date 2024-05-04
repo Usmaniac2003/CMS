@@ -38,27 +38,24 @@
             this.employeesTableAdapter = new CafeManagementSystem.cafe1DataSetTableAdapters.EmployeesTableAdapter();
             this.menuItemsTableAdapter = new CafeManagementSystem.cafe1DataSet8TableAdapters.MenuItemsTableAdapter();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.materialCard9 = new MaterialSkin.Controls.MaterialCard();
-            this.materialButton16 = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel28 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox5 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.materialTextBox5 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel28 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton16 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialMultiLineTextBox1 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
+            this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             ((System.ComponentModel.ISupportInitialize)(this.menuItemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet8)).BeginInit();
@@ -68,8 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.materialCard9.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -126,17 +121,6 @@
             this.tabPage7.Text = "MySales";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(15, 20);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowHeadersWidth = 51;
-            this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(789, 465);
-            this.dataGridView6.TabIndex = 1;
-            this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
-            // 
             // materialButton7
             // 
             this.materialButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -156,6 +140,19 @@
             this.materialButton7.UseAccentColor = false;
             this.materialButton7.UseVisualStyleBackColor = true;
             this.materialButton7.Click += new System.EventHandler(this.materialButton7_Click);
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(15, 20);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersWidth = 51;
+            this.dataGridView6.RowTemplate.Height = 24;
+            this.dataGridView6.Size = new System.Drawing.Size(789, 465);
+            this.dataGridView6.TabIndex = 1;
+            this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
             // 
             // tabPage6
             // 
@@ -186,6 +183,67 @@
             this.materialCard9.Size = new System.Drawing.Size(539, 322);
             this.materialCard9.TabIndex = 6;
             // 
+            // materialTextBox6
+            // 
+            this.materialTextBox6.AnimateReadOnly = false;
+            this.materialTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox6.Depth = 0;
+            this.materialTextBox6.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox6.LeadingIcon = null;
+            this.materialTextBox6.Location = new System.Drawing.Point(77, 132);
+            this.materialTextBox6.MaxLength = 50;
+            this.materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox6.Multiline = false;
+            this.materialTextBox6.Name = "materialTextBox6";
+            this.materialTextBox6.ReadOnly = true;
+            this.materialTextBox6.Size = new System.Drawing.Size(372, 50);
+            this.materialTextBox6.TabIndex = 4;
+            this.materialTextBox6.Text = "";
+            this.materialTextBox6.TrailingIcon = null;
+            // 
+            // materialTextBox5
+            // 
+            this.materialTextBox5.AnimateReadOnly = false;
+            this.materialTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox5.Depth = 0;
+            this.materialTextBox5.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox5.LeadingIcon = null;
+            this.materialTextBox5.Location = new System.Drawing.Point(77, 49);
+            this.materialTextBox5.MaxLength = 50;
+            this.materialTextBox5.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox5.Multiline = false;
+            this.materialTextBox5.Name = "materialTextBox5";
+            this.materialTextBox5.ReadOnly = true;
+            this.materialTextBox5.Size = new System.Drawing.Size(372, 50);
+            this.materialTextBox5.TabIndex = 3;
+            this.materialTextBox5.Text = "";
+            this.materialTextBox5.TrailingIcon = null;
+            // 
+            // materialLabel27
+            // 
+            this.materialLabel27.AutoSize = true;
+            this.materialLabel27.Depth = 0;
+            this.materialLabel27.Enabled = false;
+            this.materialLabel27.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel27.Location = new System.Drawing.Point(15, 65);
+            this.materialLabel27.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel27.Name = "materialLabel27";
+            this.materialLabel27.Size = new System.Drawing.Size(43, 19);
+            this.materialLabel27.TabIndex = 0;
+            this.materialLabel27.Text = "Name";
+            // 
+            // materialLabel28
+            // 
+            this.materialLabel28.AutoSize = true;
+            this.materialLabel28.Depth = 0;
+            this.materialLabel28.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel28.Location = new System.Drawing.Point(17, 153);
+            this.materialLabel28.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel28.Name = "materialLabel28";
+            this.materialLabel28.Size = new System.Drawing.Size(41, 19);
+            this.materialLabel28.TabIndex = 1;
+            this.materialLabel28.Text = "Email";
+            // 
             // materialButton16
             // 
             this.materialButton16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -206,109 +264,6 @@
             this.materialButton16.UseVisualStyleBackColor = true;
             this.materialButton16.Click += new System.EventHandler(this.materialButton16_Click);
             // 
-            // materialLabel28
-            // 
-            this.materialLabel28.AutoSize = true;
-            this.materialLabel28.Depth = 0;
-            this.materialLabel28.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel28.Location = new System.Drawing.Point(17, 153);
-            this.materialLabel28.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel28.Name = "materialLabel28";
-            this.materialLabel28.Size = new System.Drawing.Size(41, 19);
-            this.materialLabel28.TabIndex = 1;
-            this.materialLabel28.Text = "Email";
-            // 
-            // materialLabel27
-            // 
-            this.materialLabel27.AutoSize = true;
-            this.materialLabel27.Depth = 0;
-            this.materialLabel27.Enabled = false;
-            this.materialLabel27.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel27.Location = new System.Drawing.Point(15, 65);
-            this.materialLabel27.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel27.Name = "materialLabel27";
-            this.materialLabel27.Size = new System.Drawing.Size(43, 19);
-            this.materialLabel27.TabIndex = 0;
-            this.materialLabel27.Text = "Name";
-            // 
-            // materialTextBox5
-            // 
-            this.materialTextBox5.AnimateReadOnly = false;
-            this.materialTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox5.Depth = 0;
-            this.materialTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox5.LeadingIcon = null;
-            this.materialTextBox5.Location = new System.Drawing.Point(77, 49);
-            this.materialTextBox5.MaxLength = 50;
-            this.materialTextBox5.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox5.Multiline = false;
-            this.materialTextBox5.Name = "materialTextBox5";
-            this.materialTextBox5.ReadOnly = true;
-            this.materialTextBox5.Size = new System.Drawing.Size(372, 50);
-            this.materialTextBox5.TabIndex = 3;
-            this.materialTextBox5.Text = "";
-            this.materialTextBox5.TrailingIcon = null;
-            // 
-            // materialTextBox6
-            // 
-            this.materialTextBox6.AnimateReadOnly = false;
-            this.materialTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox6.Depth = 0;
-            this.materialTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox6.LeadingIcon = null;
-            this.materialTextBox6.Location = new System.Drawing.Point(77, 132);
-            this.materialTextBox6.MaxLength = 50;
-            this.materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox6.Multiline = false;
-            this.materialTextBox6.Name = "materialTextBox6";
-            this.materialTextBox6.ReadOnly = true;
-            this.materialTextBox6.Size = new System.Drawing.Size(372, 50);
-            this.materialTextBox6.TabIndex = 4;
-            this.materialTextBox6.Text = "";
-            this.materialTextBox6.TrailingIcon = null;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.materialButton4);
-            this.tabPage4.Controls.Add(this.dataGridView4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1319, 874);
-            this.tabPage4.TabIndex = 5;
-            this.tabPage4.Text = "Total Items Sold by Each Employee";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(18, 15);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(789, 465);
-            this.dataGridView4.TabIndex = 0;
-            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // materialButton4
-            // 
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(18, 519);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(86, 36);
-            this.materialButton4.TabIndex = 1;
-            this.materialButton4.Text = "Analyze";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
-            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.materialButton5);
@@ -321,17 +276,6 @@
             this.tabPage5.Text = "Pending Orders";
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(24, 33);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(930, 424);
-            this.dataGridView5.TabIndex = 0;
-            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
             // 
             // materialButton5
             // 
@@ -352,6 +296,19 @@
             this.materialButton5.UseAccentColor = false;
             this.materialButton5.UseVisualStyleBackColor = true;
             this.materialButton5.Click += new System.EventHandler(this.materialButton5_Click_1);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(24, 33);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.Size = new System.Drawing.Size(930, 424);
+            this.dataGridView5.TabIndex = 0;
+            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
             // 
             // tabPage2
             // 
@@ -383,35 +340,20 @@
             this.materialCard3.Size = new System.Drawing.Size(1186, 744);
             this.materialCard3.TabIndex = 1;
             // 
-            // materialLabel3
+            // materialMultiLineTextBox1
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(18, 27);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(80, 19);
-            this.materialLabel3.TabIndex = 0;
-            this.materialLabel3.Text = "customerId";
-            // 
-            // materialTextBox4
-            // 
-            this.materialTextBox4.AnimateReadOnly = false;
-            this.materialTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox4.Depth = 0;
-            this.materialTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox4.LeadingIcon = null;
-            this.materialTextBox4.Location = new System.Drawing.Point(18, 60);
-            this.materialTextBox4.MaxLength = 50;
-            this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox4.Multiline = false;
-            this.materialTextBox4.Name = "materialTextBox4";
-            this.materialTextBox4.Size = new System.Drawing.Size(323, 50);
-            this.materialTextBox4.TabIndex = 1;
-            this.materialTextBox4.Text = "";
-            this.materialTextBox4.TrailingIcon = null;
-            this.materialTextBox4.TextChanged += new System.EventHandler(this.materialTextBox4_TextChanged);
+            this.materialMultiLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialMultiLineTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialMultiLineTextBox1.Depth = 0;
+            this.materialMultiLineTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialMultiLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialMultiLineTextBox1.Location = new System.Drawing.Point(16, 176);
+            this.materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
+            this.materialMultiLineTextBox1.Size = new System.Drawing.Size(619, 448);
+            this.materialMultiLineTextBox1.TabIndex = 3;
+            this.materialMultiLineTextBox1.Text = "";
+            this.materialMultiLineTextBox1.TextChanged += new System.EventHandler(this.materialMultiLineTextBox1_TextChanged);
             // 
             // materialButton6
             // 
@@ -433,27 +375,42 @@
             this.materialButton6.UseVisualStyleBackColor = true;
             this.materialButton6.Click += new System.EventHandler(this.materialButton6_Click);
             // 
-            // materialMultiLineTextBox1
+            // materialTextBox4
             // 
-            this.materialMultiLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialMultiLineTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialMultiLineTextBox1.Depth = 0;
-            this.materialMultiLineTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMultiLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialMultiLineTextBox1.Location = new System.Drawing.Point(16, 176);
-            this.materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            this.materialMultiLineTextBox1.Size = new System.Drawing.Size(619, 448);
-            this.materialMultiLineTextBox1.TabIndex = 3;
-            this.materialMultiLineTextBox1.Text = "";
+            this.materialTextBox4.AnimateReadOnly = false;
+            this.materialTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox4.Depth = 0;
+            this.materialTextBox4.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox4.LeadingIcon = null;
+            this.materialTextBox4.Location = new System.Drawing.Point(18, 60);
+            this.materialTextBox4.MaxLength = 50;
+            this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox4.Multiline = false;
+            this.materialTextBox4.Name = "materialTextBox4";
+            this.materialTextBox4.Size = new System.Drawing.Size(323, 50);
+            this.materialTextBox4.TabIndex = 1;
+            this.materialTextBox4.Text = "";
+            this.materialTextBox4.TrailingIcon = null;
+            this.materialTextBox4.TextChanged += new System.EventHandler(this.materialTextBox4_TextChanged);
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(18, 27);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(80, 19);
+            this.materialLabel3.TabIndex = 0;
+            this.materialLabel3.Text = "customerId";
             // 
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Controls.Add(this.tabPage5);
-            this.materialTabControl1.Controls.Add(this.tabPage4);
-            this.materialTabControl1.Controls.Add(this.tabPage6);
             this.materialTabControl1.Controls.Add(this.tabPage7);
+            this.materialTabControl1.Controls.Add(this.tabPage6);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
@@ -488,9 +445,6 @@
             this.tabPage6.ResumeLayout(false);
             this.materialCard9.ResumeLayout(false);
             this.materialCard9.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
@@ -520,9 +474,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel27;
         private MaterialSkin.Controls.MaterialLabel materialLabel28;
         private MaterialSkin.Controls.MaterialButton materialButton16;
-        private System.Windows.Forms.TabPage tabPage4;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TabPage tabPage5;
         private MaterialSkin.Controls.MaterialButton materialButton5;
         private System.Windows.Forms.DataGridView dataGridView5;

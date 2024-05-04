@@ -33,6 +33,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.Itemid = new MaterialSkin.Controls.MaterialTextBox();
@@ -57,18 +59,16 @@
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.menuItemsTableAdapter = new CafeManagementSystem.cafe1DataSet5TableAdapters.MenuItemsTableAdapter();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.cafe1DataSet9 = new CafeManagementSystem.cafe1DataSet9();
-            this.promotionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.promotionsTableAdapter = new CafeManagementSystem.cafe1DataSet9TableAdapters.PromotionsTableAdapter();
             this.promotionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cafe1DataSet9 = new CafeManagementSystem.cafe1DataSet9();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.materialCard9 = new MaterialSkin.Controls.MaterialCard();
             this.materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
@@ -76,8 +76,8 @@
             this.materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel28 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton16 = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.menuItemsTableAdapter = new CafeManagementSystem.cafe1DataSet5TableAdapters.MenuItemsTableAdapter();
+            this.promotionsTableAdapter = new CafeManagementSystem.cafe1DataSet9TableAdapters.PromotionsTableAdapter();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -92,8 +92,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promotionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet9)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.materialCard9.SuspendLayout();
             this.SuspendLayout();
@@ -159,6 +159,36 @@
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(1223, 110);
             this.materialCard1.TabIndex = 1;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel6.Location = new System.Drawing.Point(513, 43);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(61, 19);
+            this.materialLabel6.TabIndex = 6;
+            this.materialLabel6.Text = "Quantity";
+            // 
+            // materialTextBox1
+            // 
+            this.materialTextBox1.AnimateReadOnly = false;
+            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox1.Depth = 0;
+            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox1.LeadingIcon = null;
+            this.materialTextBox1.Location = new System.Drawing.Point(647, 29);
+            this.materialTextBox1.MaxLength = 50;
+            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox1.Multiline = false;
+            this.materialTextBox1.Name = "materialTextBox1";
+            this.materialTextBox1.Size = new System.Drawing.Size(215, 50);
+            this.materialTextBox1.TabIndex = 5;
+            this.materialTextBox1.Text = "";
+            this.materialTextBox1.TrailingIcon = null;
+            this.materialTextBox1.TextChanged += new System.EventHandler(this.materialTextBox1_TextChanged);
             // 
             // materialButton1
             // 
@@ -229,6 +259,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.menuItemIDDataGridViewTextBoxColumn,
@@ -255,7 +287,6 @@
             this.menuItemIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.menuItemIDDataGridViewTextBoxColumn.Name = "menuItemIDDataGridViewTextBoxColumn";
             this.menuItemIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.menuItemIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -264,7 +295,6 @@
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -273,7 +303,6 @@
             this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn.Width = 125;
             // 
             // priceDataGridViewTextBoxColumn
             // 
@@ -282,7 +311,6 @@
             this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 125;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
@@ -291,7 +319,6 @@
             this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
             // 
             // availableDataGridViewCheckBoxColumn
             // 
@@ -300,7 +327,6 @@
             this.availableDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.availableDataGridViewCheckBoxColumn.Name = "availableDataGridViewCheckBoxColumn";
             this.availableDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.availableDataGridViewCheckBoxColumn.Width = 125;
             // 
             // menuItemsBindingSource
             // 
@@ -449,6 +475,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(90, 121);
             this.dataGridView2.Name = "dataGridView2";
@@ -478,10 +506,6 @@
             this.materialButton3.UseVisualStyleBackColor = true;
             this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
             // 
-            // menuItemsTableAdapter
-            // 
-            this.menuItemsTableAdapter.ClearBeforeFill = true;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.dataGridView3);
@@ -495,6 +519,8 @@
             // dataGridView3
             // 
             this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.promotionIDDataGridViewTextBoxColumn,
@@ -511,20 +537,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(983, 539);
             this.dataGridView3.TabIndex = 0;
             // 
-            // cafe1DataSet9
-            // 
-            this.cafe1DataSet9.DataSetName = "cafe1DataSet9";
-            this.cafe1DataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // promotionsBindingSource
-            // 
-            this.promotionsBindingSource.DataMember = "Promotions";
-            this.promotionsBindingSource.DataSource = this.cafe1DataSet9;
-            // 
-            // promotionsTableAdapter
-            // 
-            this.promotionsTableAdapter.ClearBeforeFill = true;
-            // 
             // promotionIDDataGridViewTextBoxColumn
             // 
             this.promotionIDDataGridViewTextBoxColumn.DataPropertyName = "PromotionID";
@@ -532,7 +544,6 @@
             this.promotionIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.promotionIDDataGridViewTextBoxColumn.Name = "promotionIDDataGridViewTextBoxColumn";
             this.promotionIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.promotionIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // nameDataGridViewTextBoxColumn1
             // 
@@ -540,7 +551,6 @@
             this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.Width = 125;
             // 
             // descriptionDataGridViewTextBoxColumn1
             // 
@@ -548,7 +558,6 @@
             this.descriptionDataGridViewTextBoxColumn1.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
-            this.descriptionDataGridViewTextBoxColumn1.Width = 125;
             // 
             // startDateDataGridViewTextBoxColumn
             // 
@@ -556,7 +565,6 @@
             this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
             this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // endDateDataGridViewTextBoxColumn
             // 
@@ -564,7 +572,6 @@
             this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
             this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // discountDataGridViewTextBoxColumn
             // 
@@ -572,7 +579,16 @@
             this.discountDataGridViewTextBoxColumn.HeaderText = "Discount";
             this.discountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
-            this.discountDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // promotionsBindingSource
+            // 
+            this.promotionsBindingSource.DataMember = "Promotions";
+            this.promotionsBindingSource.DataSource = this.cafe1DataSet9;
+            // 
+            // cafe1DataSet9
+            // 
+            this.cafe1DataSet9.DataSetName = "cafe1DataSet9";
+            this.cafe1DataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage5
             // 
@@ -608,7 +624,7 @@
             this.materialTextBox6.AnimateReadOnly = false;
             this.materialTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox6.Depth = 0;
-            this.materialTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox6.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox6.LeadingIcon = null;
             this.materialTextBox6.Location = new System.Drawing.Point(77, 132);
             this.materialTextBox6.MaxLength = 50;
@@ -626,7 +642,7 @@
             this.materialTextBox5.AnimateReadOnly = false;
             this.materialTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox5.Depth = 0;
-            this.materialTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox5.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox5.LeadingIcon = null;
             this.materialTextBox5.Location = new System.Drawing.Point(77, 49);
             this.materialTextBox5.MaxLength = 50;
@@ -685,35 +701,13 @@
             this.materialButton16.UseVisualStyleBackColor = true;
             this.materialButton16.Click += new System.EventHandler(this.materialButton16_Click_1);
             // 
-            // materialLabel6
+            // menuItemsTableAdapter
             // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(513, 43);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(61, 19);
-            this.materialLabel6.TabIndex = 6;
-            this.materialLabel6.Text = "Quantity";
+            this.menuItemsTableAdapter.ClearBeforeFill = true;
             // 
-            // materialTextBox1
+            // promotionsTableAdapter
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(647, 29);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(215, 50);
-            this.materialTextBox1.TabIndex = 5;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.TextChanged += new System.EventHandler(this.materialTextBox1_TextChanged);
+            this.promotionsTableAdapter.ClearBeforeFill = true;
             // 
             // CustomerPanel
             // 
@@ -744,8 +738,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promotionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet9)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.materialCard9.ResumeLayout(false);
             this.materialCard9.PerformLayout();

@@ -28,6 +28,7 @@ namespace CafeManagementSystem
             materialTextBox5.Text = Name;
             string email = GetEmployeeEmail(EmployeeId);
             materialTextBox6.Text = email;
+            this.WindowState = FormWindowState.Maximized;
 
         }// Function to retrieve Employee name from the database based on Employee ID
         private string GetEmployeeName(int employeeId)
@@ -463,6 +464,11 @@ namespace CafeManagementSystem
         }
 
         private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialMultiLineTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
