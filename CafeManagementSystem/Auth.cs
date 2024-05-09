@@ -17,11 +17,19 @@ namespace CafeManagementSystem
         public Auth()
         {
             InitializeComponent();
+            
+            var greenColorScheme = new ColorScheme(
+    Primary.Green800,   // Primary color for the UI elements like the app bar
+    Primary.Green900,   // Darker primary color for darker UI elements
+    Primary.Green500,   // Lighter shade for secondary UI elements
+    Accent.LightGreen700, // Accent color for highlights and icons
+    TextShade.WHITE      // Text color to ensure good contrast
+);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
-
+            materialSkinManager.ColorScheme = greenColorScheme;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -166,8 +174,10 @@ namespace CafeManagementSystem
 
                     if (reader.Read())
                     {
+                        int adminId = reader.GetInt32(reader.GetOrdinal("AdminID"));
+
                         // Admin found, redirect to AdminPanel
-                        AdminPanel adminPanel = new AdminPanel();
+                        AdminPanel adminPanel = new AdminPanel(adminId);
                         adminPanel.Show();
                         this.Hide();
                         return;
@@ -180,8 +190,9 @@ namespace CafeManagementSystem
 
                     if (reader.Read())
                     {
+                    int EmployeeId = reader.GetInt32(reader.GetOrdinal("EmployeeId"));
                         // Employee found, redirect to EmployeePanel
-                        SalesmanPanel employeePanel = new SalesmanPanel();
+                        SalesmanPanel employeePanel = new SalesmanPanel(EmployeeId);
                         employeePanel.Show();
                         this.Hide();
                         return;
@@ -194,8 +205,9 @@ namespace CafeManagementSystem
 
                     if (reader.Read())
                     {
+                    int CustomerId = reader.GetInt32(reader.GetOrdinal("CustomerId"));
                         // Customer found, redirect to CustomerPanel
-                        CustomerPanel customerPanel = new CustomerPanel();
+                        CustomerPanel customerPanel = new CustomerPanel(CustomerId);
                         customerPanel.Show();
                         this.Hide();
                         return;
