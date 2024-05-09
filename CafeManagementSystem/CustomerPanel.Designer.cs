@@ -29,6 +29,7 @@
         private void InitializeComponent()
             {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPanel));
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -78,6 +79,7 @@
             this.materialButton16 = new MaterialSkin.Controls.MaterialButton();
             this.menuItemsTableAdapter = new CafeManagementSystem.cafe1DataSet5TableAdapters.MenuItemsTableAdapter();
             this.promotionsTableAdapter = new CafeManagementSystem.cafe1DataSet9TableAdapters.PromotionsTableAdapter();
+            this.customer = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -107,6 +109,7 @@
             this.materialTabControl1.Controls.Add(this.tabPage5);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialTabControl1.ImageList = this.customer;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
             this.materialTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -121,11 +124,12 @@
             this.tabPage1.Controls.Add(this.materialLabel4);
             this.tabPage1.Controls.Add(this.materialCard1);
             this.tabPage1.Controls.Add(this.materialCard2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.ImageKey = "orderfood.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage1.Size = new System.Drawing.Size(1319, 862);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Order Food";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -341,11 +345,12 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.materialCard3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.ImageKey = "reserve table.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage2.Size = new System.Drawing.Size(1319, 862);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reserve Table";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -451,9 +456,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.materialCard4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.ImageKey = "orderhistory.png";
+            this.tabPage3.Location = new System.Drawing.Point(4, 37);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage3.Size = new System.Drawing.Size(1319, 862);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "My orders History";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -509,9 +515,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.dataGridView3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.ImageKey = "promotion.png";
+            this.tabPage4.Location = new System.Drawing.Point(4, 37);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage4.Size = new System.Drawing.Size(1319, 862);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Promotion";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -593,10 +600,11 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.materialCard9);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.ImageKey = "logout.png";
+            this.tabPage5.Location = new System.Drawing.Point(4, 37);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage5.Size = new System.Drawing.Size(1319, 862);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "logout";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -709,6 +717,30 @@
             // 
             this.promotionsTableAdapter.ClearBeforeFill = true;
             // 
+            // customer
+            // 
+            this.customer.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("customer.ImageStream")));
+            this.customer.TransparentColor = System.Drawing.Color.Transparent;
+            this.customer.Images.SetKeyName(0, "add.png");
+            this.customer.Images.SetKeyName(1, "analytics.png");
+            this.customer.Images.SetKeyName(2, "diagrams.png");
+            this.customer.Images.SetKeyName(3, "edit.png");
+            this.customer.Images.SetKeyName(4, "employee.png");
+            this.customer.Images.SetKeyName(5, "inventory.png");
+            this.customer.Images.SetKeyName(6, "items.png");
+            this.customer.Images.SetKeyName(7, "login.png");
+            this.customer.Images.SetKeyName(8, "logout.png");
+            this.customer.Images.SetKeyName(9, "orderfood.png");
+            this.customer.Images.SetKeyName(10, "orderhistory.png");
+            this.customer.Images.SetKeyName(11, "promotion.png");
+            this.customer.Images.SetKeyName(12, "query.png");
+            this.customer.Images.SetKeyName(13, "register.png");
+            this.customer.Images.SetKeyName(14, "remove.png");
+            this.customer.Images.SetKeyName(15, "reserve table.png");
+            this.customer.Images.SetKeyName(16, "sales.png");
+            this.customer.Images.SetKeyName(17, "search.png");
+            this.customer.Images.SetKeyName(18, "view.png");
+            // 
             // CustomerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -797,5 +829,6 @@
         private MaterialSkin.Controls.MaterialButton materialButton16;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private System.Windows.Forms.ImageList customer;
     }
     }

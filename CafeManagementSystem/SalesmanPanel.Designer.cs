@@ -57,6 +57,7 @@
             this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            this.Salespanel = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.menuItemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cafe1DataSet)).BeginInit();
@@ -114,9 +115,10 @@
             // 
             this.tabPage7.Controls.Add(this.materialButton7);
             this.tabPage7.Controls.Add(this.dataGridView6);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.ImageKey = "mysales.png";
+            this.tabPage7.Location = new System.Drawing.Point(4, 37);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage7.Size = new System.Drawing.Size(1319, 862);
             this.tabPage7.TabIndex = 7;
             this.tabPage7.Text = "MySales";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -157,10 +159,11 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.materialCard9);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.ImageKey = "logout.png";
+            this.tabPage6.Location = new System.Drawing.Point(4, 37);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage6.Size = new System.Drawing.Size(1319, 862);
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "logout";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -268,10 +271,10 @@
             // 
             this.tabPage5.Controls.Add(this.materialButton5);
             this.tabPage5.Controls.Add(this.dataGridView5);
-            this.tabPage5.ImageKey = "icons8-point-of-sale-68.png";
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.ImageKey = "pending.png";
+            this.tabPage5.Location = new System.Drawing.Point(4, 37);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage5.Size = new System.Drawing.Size(1319, 862);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Pending Orders";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -313,12 +316,12 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.materialCard3);
-            this.tabPage2.ImageKey = "icons8-billing-80.png";
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.ImageKey = "billing.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1319, 874);
+            this.tabPage2.Size = new System.Drawing.Size(1319, 862);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Billing ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -413,6 +416,7 @@
             this.materialTabControl1.Controls.Add(this.tabPage6);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialTabControl1.ImageList = this.Salespanel;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
             this.materialTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -421,6 +425,33 @@
             this.materialTabControl1.SelectedIndex = 0;
             this.materialTabControl1.Size = new System.Drawing.Size(1327, 903);
             this.materialTabControl1.TabIndex = 2;
+            // 
+            // Salespanel
+            // 
+            this.Salespanel.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Salespanel.ImageStream")));
+            this.Salespanel.TransparentColor = System.Drawing.Color.Transparent;
+            this.Salespanel.Images.SetKeyName(0, "add.png");
+            this.Salespanel.Images.SetKeyName(1, "analytics.png");
+            this.Salespanel.Images.SetKeyName(2, "billing.png");
+            this.Salespanel.Images.SetKeyName(3, "diagrams.png");
+            this.Salespanel.Images.SetKeyName(4, "edit.png");
+            this.Salespanel.Images.SetKeyName(5, "employee.png");
+            this.Salespanel.Images.SetKeyName(6, "inventory.png");
+            this.Salespanel.Images.SetKeyName(7, "items.png");
+            this.Salespanel.Images.SetKeyName(8, "login.png");
+            this.Salespanel.Images.SetKeyName(9, "logout.png");
+            this.Salespanel.Images.SetKeyName(10, "mysales.png");
+            this.Salespanel.Images.SetKeyName(11, "orderfood.png");
+            this.Salespanel.Images.SetKeyName(12, "orderhistory.png");
+            this.Salespanel.Images.SetKeyName(13, "pending.png");
+            this.Salespanel.Images.SetKeyName(14, "promotion.png");
+            this.Salespanel.Images.SetKeyName(15, "query.png");
+            this.Salespanel.Images.SetKeyName(16, "register.png");
+            this.Salespanel.Images.SetKeyName(17, "remove.png");
+            this.Salespanel.Images.SetKeyName(18, "reserve table.png");
+            this.Salespanel.Images.SetKeyName(19, "sales.png");
+            this.Salespanel.Images.SetKeyName(20, "search.png");
+            this.Salespanel.Images.SetKeyName(21, "view.png");
             // 
             // SalesmanPanel
             // 
@@ -484,5 +515,6 @@
         private MaterialSkin.Controls.MaterialTextBox materialTextBox4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
+        private System.Windows.Forms.ImageList Salespanel;
     }
     }

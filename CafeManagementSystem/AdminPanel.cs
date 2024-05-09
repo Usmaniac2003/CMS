@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using LiveCharts.Wpf;
 using LiveCharts;
 using LiveCharts.WinForms;
+using System.Windows.Controls;
 
 namespace CafeManagementSystem
 {
@@ -23,10 +24,17 @@ namespace CafeManagementSystem
         {
             Adminid = AdminId;
             InitializeComponent();
+            var greenColorScheme = new ColorScheme(
+    Primary.Green800,   // Primary color for the UI elements like the app bar
+    Primary.Green900,   // Darker primary color for darker UI elements
+    Primary.Green500,   // Lighter shade for secondary UI elements
+    Accent.LightGreen700, // Accent color for highlights and icons
+    TextShade.WHITE      // Text color to ensure good contrast
+);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
+            materialSkinManager.ColorScheme = greenColorScheme;
             string adminName = GetAdminName(Adminid); // adminId should be accessible here
             materialTextBox5.Text = adminName;
             string email = GetAdminEmail(Adminid);
@@ -1264,64 +1272,7 @@ namespace CafeManagementSystem
 
         }
 
-        private void materialButton14_Click(object sender, EventArgs e)
-        {
-            // Variables for conversion results
-            int menuID;
-            int stockLevel;
-            int reorderThreshold;
-
-            // Attempt to convert text to integers
-            bool isMenuIDValid = int.TryParse(menuitemid.Text, out menuID);
-            bool isStockLevelValid = int.TryParse(stocklevel.Text, out stockLevel);
-            bool isReorderThresholdValid = int.TryParse(reorderthreshold.Text, out reorderThreshold);
-
-            // Validate all conversions
-            if (isMenuIDValid && isStockLevelValid && isReorderThresholdValid)
-            {
-                // All conversions succeeded, add to Inventory
-                try
-                {
-                    // Connection string for your database
-                    string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
-
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
-
-                        // Insert into Inventory
-                        string query = @"
-                            INSERT INTO Inventory (MenuItemID, StockLevel, ReorderThreshold, LastUpdated)
-                            VALUES (@MenuItemID, @StockLevel, @ReorderThreshold, GETDATE())";
-
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@MenuItemID", menuID);
-                            command.Parameters.AddWithValue("@StockLevel", stockLevel);
-                            command.Parameters.AddWithValue("@ReorderThreshold", reorderThreshold);
-
-                            command.ExecuteNonQuery();  // Execute the SQL command
-                        }
-                    }
-
-                    MessageBox.Show("Inventory updated successfully.", "Success");
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show($"Database error: {ex.Message}", "Error");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred: {ex.Message}", "Error");
-                }
-            }
-            else
-            {
-                // If any conversion fails, show an error message
-                MessageBox.Show("Invalid input. Please ensure all fields contain valid integers.", "Error");
-            }
-        }
-
+        
         private void elementHost1_ChildChanged_3(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
             CreatePieChartForCatagorySales();
@@ -1668,6 +1619,222 @@ namespace CafeManagementSystem
         private void elementHost5_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
             customerOrderBarChart();
+        }
+
+        private void materialLabel29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton14_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = sqlquery.Text;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView13.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void materialButton15_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT \r\n    e.Role AS EmployeeRole,\r\n    COUNT(DISTINCT s.ShiftID) AS TotalShifts,\r\n    SUM(DATEDIFF(HOUR, s.StartTime, s.EndTime)) AS TotalHoursWorked,\r\n    AVG(DATEDIFF(HOUR, s.StartTime, s.EndTime)) AS AvgHoursWorked\r\nFROM \r\n    Shifts s\r\nINNER JOIN \r\n    Employees e ON s.EmployeeID = e.EmployeeID\r\nINNER JOIN \r\n    Orders o ON o.EmployeeID = e.EmployeeID\r\nINNER JOIN \r\n    OrderDetails od ON o.OrderID = od.OrderID\r\nGROUP BY \r\n    e.Role;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView23.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void materialButton26_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT \r\n    e.Role AS EmployeeRole,\r\n    m.Category,\r\n    COUNT(DISTINCT o.OrderID) AS TotalOrders,\r\n    SUM(o.TotalAmount) AS TotalSales,\r\n    AVG(o.TotalAmount) AS AvgOrderAmount\r\nFROM \r\n    Orders o\r\nINNER JOIN \r\n    Employees e ON o.EmployeeID = e.EmployeeID\r\nINNER JOIN \r\n    OrderDetails od ON o.OrderID = od.OrderID\r\nINNER JOIN \r\n    MenuItems m ON od.MenuItemID = m.MenuItemID\r\nGROUP BY \r\n    e.Role, m.Category;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView24.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void tabPage22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView25_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Analyze_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
+            string query = "SELECT \r\n    e.Role AS EmployeeRole,\r\n    COUNT(DISTINCT s.ShiftID) AS TotalShifts,\r\n    SUM(DATEDIFF(HOUR, s.StartTime, s.EndTime)) AS TotalHoursWorked,\r\n    AVG(DATEDIFF(HOUR, s.StartTime, s.EndTime)) AS AvgHoursWorked\r\nFROM \r\n    Shifts s\r\nINNER JOIN \r\n    Employees e ON s.EmployeeID = e.EmployeeID\r\nINNER JOIN \r\n    Orders o ON o.EmployeeID = e.EmployeeID\r\nINNER JOIN \r\n    OrderDetails od ON o.OrderID = od.OrderID\r\nGROUP BY \r\n    e.Role;\r\n";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+
+                    // Set the DataTable as the DataSource for dataGridView4
+                    dataGridView25.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void materialLabel24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton27_Click(object sender, EventArgs e)
+        {
+            int menuItemID = int.Parse(menuitemid_a.Text);
+            int stockLevel = int.Parse(stock_level.Text);
+            int reorderThreshold = int.Parse(reorder_threshold.Text);
+            
+            AddToInventory(menuItemID, stockLevel, reorderThreshold);
+        }
+        private void AddToInventory(int menuItemID, int stockLevel, int reorderThreshold)
+        {
+            // Build the SQL query
+            string query = $"INSERT INTO Inventory (MenuItemID, StockLevel, ReorderThreshold, LastUpdated) " +
+                           $"VALUES ({menuItemID}, {stockLevel}, {reorderThreshold}, GETDATE());";
+
+            // Create a connection to the database
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True"))
+            {
+                // Create a command with the query and connection
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    // Open the connection
+                    connection.Open();
+
+                    // Execute the query
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    // Check if the query was successful
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Item added to inventory successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add item to inventory.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+        }
+
+        private void materialButton28_Click(object sender, EventArgs e)
+        {
+            int mid = int.Parse(m_id.Text);
+            string query = $"DELETE FROM Inventory\r\n" +
+                           $"WHERE MenuItemID = {mid};\r\n";
+
+            // Create a connection to the database
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True"))
+            {
+                // Create a command with the query and connection
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    // Open the connection
+                    connection.Open();
+
+                    // Execute the query
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    // Check if the query was successful
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Item removed from inventory successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add item to inventory.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
         }
     }
 }

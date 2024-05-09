@@ -50,7 +50,9 @@
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.password_register = new MaterialSkin.Controls.MaterialTextBox();
             this.register = new MaterialSkin.Controls.MaterialButton();
+            this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -64,7 +66,7 @@
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialTabControl1.ImageList = this.imageList1;
+            this.materialTabControl1.ImageList = this.imageList3;
             this.materialTabControl1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
             this.materialTabControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -78,12 +80,12 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.materialCard1);
-            this.tabPage1.ImageKey = "icons8-login-64.png";
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.ImageKey = "login.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1319, 861);
+            this.tabPage1.Size = new System.Drawing.Size(1319, 875);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -131,7 +133,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(72, 190);
+            this.materialLabel2.Location = new System.Drawing.Point(23, 214);
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -144,7 +146,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(72, 53);
+            this.materialLabel1.Location = new System.Drawing.Point(23, 40);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -195,12 +197,12 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.materialCard2);
-            this.tabPage2.ImageKey = "icons8-sign-up-80.png";
-            this.tabPage2.Location = new System.Drawing.Point(4, 39);
+            this.tabPage2.ImageKey = "register.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1319, 861);
+            this.tabPage2.Size = new System.Drawing.Size(1319, 875);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sign up";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -393,6 +395,26 @@
             this.register.UseVisualStyleBackColor = true;
             this.register.Click += new System.EventHandler(this.materialButton2_Click);
             // 
+            // imageList3
+            // 
+            this.imageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList3.ImageStream")));
+            this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList3.Images.SetKeyName(0, "add.png");
+            this.imageList3.Images.SetKeyName(1, "analytics.png");
+            this.imageList3.Images.SetKeyName(2, "diagrams.png");
+            this.imageList3.Images.SetKeyName(3, "edit.png");
+            this.imageList3.Images.SetKeyName(4, "employee.png");
+            this.imageList3.Images.SetKeyName(5, "inventory.png");
+            this.imageList3.Images.SetKeyName(6, "items.png");
+            this.imageList3.Images.SetKeyName(7, "login.png");
+            this.imageList3.Images.SetKeyName(8, "logout.png");
+            this.imageList3.Images.SetKeyName(9, "query.png");
+            this.imageList3.Images.SetKeyName(10, "register.png");
+            this.imageList3.Images.SetKeyName(11, "remove.png");
+            this.imageList3.Images.SetKeyName(12, "sales.png");
+            this.imageList3.Images.SetKeyName(13, "search.png");
+            this.imageList3.Images.SetKeyName(14, "view.png");
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -401,6 +423,12 @@
             this.imageList1.Images.SetKeyName(1, "icons8-login.gif");
             this.imageList1.Images.SetKeyName(2, "icons8-sign-up-80.png");
             this.imageList1.Images.SetKeyName(3, "icons8-login-64.png");
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Auth
             // 
@@ -452,6 +480,8 @@
         private MaterialSkin.Controls.MaterialTextBox email;
         private MaterialSkin.Controls.MaterialButton register;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private System.Windows.Forms.ImageList imageList3;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }
 

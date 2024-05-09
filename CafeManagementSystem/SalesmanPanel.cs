@@ -20,10 +20,17 @@ namespace CafeManagementSystem
         {
             EmployeeId = ei;
             InitializeComponent();
+            var greenColorScheme = new ColorScheme(
+    Primary.Green800,   // Primary color for the UI elements like the app bar
+    Primary.Green900,   // Darker primary color for darker UI elements
+    Primary.Green500,   // Lighter shade for secondary UI elements
+    Accent.LightGreen700, // Accent color for highlights and icons
+    TextShade.WHITE      // Text color to ensure good contrast
+);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
+            materialSkinManager.ColorScheme = greenColorScheme;
             string Name = GetEmployeeName(EmployeeId); // adminId should be accessible here
             materialTextBox5.Text = Name;
             string email = GetEmployeeEmail(EmployeeId);
@@ -255,7 +262,6 @@ namespace CafeManagementSystem
             string connectionString = "Data Source=DESKTOP-B92AG2K\\SQLEXPRESS;Initial Catalog=cafe1;Integrated Security=True";
             int EmpId = EmployeeId; //Update this Id into Orders table
 
-            MessageBox.Show(EmpId.ToString());
             // Example order ID - this could come from user input or previous context
             if (!int.TryParse(materialTextBox4.Text, out int orderId))
             {

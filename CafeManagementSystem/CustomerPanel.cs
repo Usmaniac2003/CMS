@@ -21,10 +21,17 @@ namespace CafeManagementSystem
             {
             CustomerId= ci;
             InitializeComponent();
+            var greenColorScheme = new ColorScheme(
+    Primary.Green800,   // Primary color for the UI elements like the app bar
+    Primary.Green900,   // Darker primary color for darker UI elements
+    Primary.Green500,   // Lighter shade for secondary UI elements
+    Accent.LightGreen700, // Accent color for highlights and icons
+    TextShade.WHITE      // Text color to ensure good contrast
+);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
+            materialSkinManager.ColorScheme = greenColorScheme;
             string Name = GetCustomerName(CustomerId); // adminId should be accessible here
             materialTextBox5.Text = Name;
             string email = GetCustomerEmail(CustomerId);
